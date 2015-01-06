@@ -212,6 +212,7 @@
 	$GLOBALS['cfg']['enable_feature_persistent_login'] = 1;
 	$GLOBALS['cfg']['enable_feature_account_delete'] = 1;
 	$GLOBALS['cfg']['enable_feature_password_retrieval'] = 1;
+	$GLOBALS['cfg']['enable_feature_artisanal_integers'] = 1;
 
 	#
 	# invite codes

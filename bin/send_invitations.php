@@ -15,7 +15,7 @@
 
 	function import_row($row){
 		## remove email address to turn off debug mode
-		if ($row['Email Address'] == 'someone@example.com'){
+		if ($row['Email Address'] == 'micahwalter@gmail.com'){
 			$rsp = invite_codes_create($row['Email Address']);
 			if (!$rsp['invite']['sent']){
 				$rsp = invite_codes_send_invite($rsp['invite'], 'email_invite_codes.txt');

@@ -1,0 +1,4 @@
+{assign var="email_subject" value="Confirming your participating in Moment's Notice"}
+
+{$order|@dumper}
+

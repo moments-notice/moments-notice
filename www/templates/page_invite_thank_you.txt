@@ -4,7 +4,7 @@
 <div class="container">
 	<p>Congratulations!</p>
 	<p>You have succesfully signed up for Moment's Notice. Soon, you will be receiving your first roll of 35mm film in the mail. All you have to do is shoot it and send it back! You will also be receiving detailed instructions on how to return your film and what happens next. Please look for an email from Moment's Notice which explains everything you need to know.</p>
-
+<p>For your records, your order number is <strong>{$order.id|escape}</strong> and your roll's <a href="http://brooklynintegers.com">artisanal</a> id is <strong>{$order.roll_id|escape}</strong>.
 <p>I can't wait to see what we create together!</p>
 <p>--micah</p>
 
