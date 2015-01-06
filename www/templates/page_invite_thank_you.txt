@@ -1,0 +1,13 @@
+{assign var="page_title" value="Thank you for participating!"}
+{include file="inc_head.txt"}
+
+<div class="container">
+	<p>Congratulations!</p>
+	<p>You have succesfully signed up for Moment's Notice. Soon, you will be receiving your first roll of 35mm film in the mail. All you have to do is shoot it and send it back! You will also be receiving detailed instructions on how to return your film and what happens next. Please look for an email from Moment's Notice which explains everything you need to know.</p>
+
+<p>I can't wait to see what we create together!</p>
+<p>--micah</p>
+
+</div>
+
+{include file="inc_foot.txt"}

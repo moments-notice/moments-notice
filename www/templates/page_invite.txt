@@ -1,0 +1,110 @@
+{assign var="page_title" value="You are invited!"}
+
+{include file="inc_head.txt"}
+
+<div class="container">
+
+<h3>Welcome to Moment's Notice!</h3>
+
+<p>Congratulations!</p>
+<p>You've been selected to participate in Moment's Notice, an experiment in correspondence.</p>
+<p>Please complete the form below to receive your first roll of 35mm film.</p>
+
+<form action="{$cfg.abs_root_url}invite/{$code|escape}" method="post" accept-encoding="UTF-8" class="form-horizontal">
+      <input type="hidden" name="done" value="1" />
+			<fieldset>
+
+				<!-- Form Name -->
+				<legend>Your Information</legend>
+
+				<!-- Text input-->
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="firstname">First Name</label>
+
+					<div class="col-md-4">
+						<input id="firstname" name="firstname" type="text" placeholder="" class="form-control input-md" required=""  />
+					</div>
+				</div>
+				
+				<!-- Text input-->
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="lastname">Last Name</label>
+
+					<div class="col-md-4">
+						<input id="lastname" name="lastname" type="text" placeholder="" class="form-control input-md" required="" />
+					</div>
+				</div>
+
+			</fieldset>
+
+
+			<fieldset>
+
+			<!-- Form Name -->
+			<legend>Shipping Information</legend>
+
+			<!-- Text input-->
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="country">Country</label>
+
+					<div class="col-md-4">
+						<input id="country" name="country" type="text" placeholder="" class="form-control input-md" required="" />
+					</div>
+				</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="address1">Address Line 1</label>
+				<div class="col-md-4">
+					<input id="address1" name="address1" type="text" placeholder="" class="form-control input-md" required="" {if $userinfo.AccountInformation.0}value="{$userinfo.AccountInformation.0.street1|escape}"{/if} />
+				</div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="address2">Address Line 2</label>
+				<div class="col-md-4">
+					<input id="address2" name="address2" type="text" placeholder="" class="form-control input-md" {if $userinfo.AccountInformation.0.street2}value="{$userinfo.AccountInformation.0.street2|escape}"{/if} />
+				</div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="city">City</label>
+				<div class="col-md-4">
+					<input id="city" name="city" type="text" placeholder="" class="form-control input-md" required="" {if $userinfo.AccountInformation.0}value="{$userinfo.AccountInformation.0.city|escape}"{/if} />
+				</div>
+			</div>
+
+			<!-- Text input-->
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="country">State / Province / Country</label>
+
+					<div class="col-md-4">
+						<input id="state" name="state" type="text" placeholder="" class="form-control input-md" required="" />
+					</div>
+				</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="zipcode">Zip / Postal Code</label>
+				<div class="col-md-4">
+					<input id="zipcode" name="zipcode" type="text" placeholder="" class="form-control input-md" required="" {if $userinfo.AccountInformation.0}value="{$userinfo.AccountInformation.0.postal_code|escape}"{/if} />
+				</div>
+			</div>
+
+			<!-- Button -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="singlebutton"></label>
+				<div class="col-md-4">
+					<button id="singlebutton" type="submit" name="singlebutton" class="btn btn-primary">Submit</button>
+				</div>
+			</div>
+		</fieldset>
+
+</form>
+
+
+</div>
+
+{include file="inc_foot.txt"}

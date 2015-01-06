@@ -100,9 +100,29 @@
 		# '/foo' => '/bar/',
 	);
 
-	$GLOBALS['cfg']['email_from_name']	= 'flamework app';
-	$GLOBALS['cfg']['email_from_email']	= 'admin@ourapp.com';
-	$GLOBALS['cfg']['auto_email_args']	= '-fadmin@ourapp.com';
+
+	# email
+	
+	$GLOBALS['cfg']['email_from_name']	= 'Moments Notice';
+	$GLOBALS['cfg']['email_from_email']	= 'micah@micahwalter.com';
+	$GLOBALS['cfg']['auto_email_args']	= '';
+	
+	# Built email support
+	
+	$GLOBALS['cfg']['enable_feature_email_php'] = 0;
+	
+	# SendGrid email Support
+	
+	$GLOBALS['cfg']['enable_feature_email_sendgrid'] = 0;
+	$GLOBALS['cfg']['email_sendgrid_username'] = 'cooperhewitt';
+	$GLOBALS['cfg']['email_sendgrid_password'] = 'READ-FROM-SECRETS';
+	
+	# Mandrill email Support
+	
+	$GLOBALS['cfg']['enable_feature_email_mandrill'] = 1;
+	$GLOBALS['cfg']['mandrill_api_key'] = 'READ-FROM-SECRETS';
+	$GLOBALS['cfg']['enable_feature_mandrill_proxy'] = 0;
+	$GLOBALS['cfg']['mandrill_proxy_address'] = '';
 
 	#
 	# Things you can probably not worry about
@@ -193,6 +213,13 @@
 	$GLOBALS['cfg']['enable_feature_account_delete'] = 1;
 	$GLOBALS['cfg']['enable_feature_password_retrieval'] = 1;
 
+	#
+	# invite codes
+	#
+	
+	$GLOBALS['cfg']['enable_feature_invite_codes'] = 1;
+	$GLOBALS['cfg']['invite_codes_allow_signedin_users'] = 1;
+	$GLOBALS['cfg']['crypto_invite_secret'] = 'READ-FROM-SECRETS';
 
 	#
 	# enable this flag to show a full call chain (instead of just the
@@ -217,4 +244,7 @@
 
 	$GLOBALS['cfg']['autoload_libs_if_enabled'] = array(
 		# 'some_feature_flag' => array('lib1', 'lib2')
+		'email_mandrill' => array('email', 'email_mandrill'), 
+		'email_php' => array('email', 'email_php'),
+		'email_sendgrid' => array('email', 'email_sendgrid'),
 	);

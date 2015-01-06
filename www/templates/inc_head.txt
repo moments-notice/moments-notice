@@ -23,8 +23,9 @@
       <script src="{$cfg.abs_root}javascript/html5.js"></script>
     <![endif]-->
 
+  {$extra_head}
   </head>
 
   <body>
 
-  {include file="inc_head_navi.txt"}
+  <!-- {include file="inc_head_navi.txt"} -->

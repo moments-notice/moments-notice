@@ -70,6 +70,9 @@ RewriteRule  ^account/delete/?$		account_delete.php	[L]
 RewriteRule ^about/?$			about.php 		[L,QSA]
 RewriteRule ^contact/?$			contact.php 		[L,QSA]
 
+# Invite pages
+RewriteRule ^invite/?$			invite.php?%{QUERY_STRING} [L]
+RewriteRule ^invite(?:/([^/]+))?/?$	invite.php?code=$1&%{QUERY_STRING} [L]
 
 # Test pages
 
