@@ -94,7 +94,7 @@
 			$postal_code = post_str("postalcode");
 
 
-			if ((!strlen($street1)) || (!strlen($street2)) || (!strlen($city)) || (!strlen($state)) || (!strlen($country)) || (!strlen($postal_code))){
+			if ((!strlen($street1)) || (!strlen($city)) || (!strlen($state)) || (!strlen($country)) || (!strlen($postal_code))){
 
 				$smarty->assign('error_missing', 1);
 				$ok = 0;
