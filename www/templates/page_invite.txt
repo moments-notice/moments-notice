@@ -3,12 +3,16 @@
 {include file="inc_head.txt"}
 
 <div class="container">
-
+<img class="img-responsive" src="{$cfg.abs_root_url}images/banner.jpg" />
 <h3>Welcome to Moment's Notice!</h3>
 
 <p>Congratulations!</p>
 <p>You've been selected to participate in Moment's Notice, an experiment in correspondence.</p>
 <p>Please complete the form below to receive your first roll of 35mm film.</p>
+<br />
+
+{if $error_missing}	<p class="alert alert-danger">Please fill out all the fields.</p>{/if}
+{if $error_username}	<p class="alert alert-danger">That username is already taken. Please select another.</p>{/if}
 
 <form action="{$cfg.abs_root_url}invite/{$code|escape}" method="post" accept-encoding="UTF-8" class="form-horizontal">
       <input type="hidden" name="done" value="1" />

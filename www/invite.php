@@ -93,25 +93,35 @@
 			$country = post_str("country");
 			$postal_code = post_str("postalcode");
 
-			$address = array(
-				"street1" => $street1,
-				"street2" => $street2,
-				"city" => $city,
-				"state" => $state,
-				"country" => $country,
-				"postcode" => $postal_code,
-				"user_id" => $user['id'],
-			);
 
-			$rsp = users_address_create($address);
-			
-			if ($rsp['ok']){
-				$address = $rsp['address'];
-			} else {
+			if ((!strlen($street1)) || (!strlen($street2)) || (!strlen($city)) || (!strlen($state)) || (!strlen($country)) || (!strlen($postal_code))){
+
+				$smarty->assign('error_missing', 1);
 				$ok = 0;
-				$smarty->assign('error_bad_address', 1);
+			}
+
+			if ($ok) {
+				$address = array(
+					"street1" => $street1,
+					"street2" => $street2,
+					"city" => $city,
+					"state" => $state,
+					"country" => $country,
+					"postcode" => $postal_code,
+					"user_id" => $user['id'],
+				);
+				
+				$rsp = users_address_create($address);
+				
+				if ($rsp['ok']){
+					$address = $rsp['address'];
+				} else {
+					$ok = 0;
+					$smarty->assign('error_bad_address', 1);
+				}
 			}
 		}
+
 		
 		# create a new "roll" of film
 		
@@ -176,7 +186,7 @@
 				"redeemed" => $now
 			);
 			
-			# invite_codes_update($invite, $update);
+			invite_codes_update($invite, $update);
 		
 			# send user an email about their order
 			$smarty->assign('order', $order);

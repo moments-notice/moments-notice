@@ -1,7 +1,7 @@
 <?php
-	include('include/init.php');
+	#include('include/init.php');
 
-	$GLOBALS['smarty']->display('page_index.txt');
+	header("location: https://micahwalter.com/moments-notice");
+	#$GLOBALS['smarty']->display('page_index.txt');
 	exit();
 
-?>
