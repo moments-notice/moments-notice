@@ -77,6 +77,7 @@
 				);
 			
 				$user = users_create_user($new_user);
+				$user = $user['user'];
 			}
 		}
 
