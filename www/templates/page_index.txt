@@ -1,7 +1,8 @@
 {include file='inc_head.txt' nav_tab='home'}
 
 <div class="container">
-<h1>Hello...</h1>
+<img class="img-responsive" src="{$cfg.abs_root_url}images/banner.jpg" />
+<h1>Welcome to Moment's Notice</h1>
 </div>
 
 {include file='inc_foot.txt'}

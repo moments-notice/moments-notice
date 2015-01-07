@@ -6,7 +6,7 @@
 	#
 
 	$GLOBALS['cfg']['site_name'] = 'moment\'s notice';
-	$GLOBALS['cfg']['environment'] = 'dev';
+	$GLOBALS['cfg']['environment'] = 'prod';
 
 	$GLOBALS['cfg']['site_disabled'] = 0;
 	$GLOBALS['cfg']['site_disabled_retry_after'] = 0;	# seconds; if set will return HTTP Retry-After header
@@ -23,8 +23,8 @@
 	# see also: https://github.com/straup/flamework-tools/blob/master/bin/setup-db.sh
 
 	$GLOBALS['cfg']['db_main'] = array(
-		'host'	=> 'localhost',
-		'user'	=> 'root',
+		'host'	=> 'READ-FROM-SECRETS',
+		'user'	=> 'READ-FROM-SECRETS',
 		'pass'	=> 'READ-FROM-SECRETS',
 		'name'	=> 'moments_notice',
 		'auto_connect' => 0,
@@ -49,7 +49,7 @@
 
 	# hard coding this URL will ensure it works in cron mode too
 
-	$GLOBALS['cfg']['server_scheme'] = (isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on')) ? 'https' : 'http';
+	$GLOBALS['cfg']['server_scheme'] = 'https'; #(isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on')) ? 'https' : 'http';
 	$GLOBALS['cfg']['server_name'] = isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : 'fake.com';
 
 	$GLOBALS['cfg']['abs_root_url']		= "{$GLOBALS['cfg']['server_scheme']}://{$GLOBALS['cfg']['server_name']}/";
