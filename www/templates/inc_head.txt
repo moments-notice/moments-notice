@@ -27,5 +27,3 @@
   </head>
 
   <body>
-
-  <!-- {include file="inc_head_navi.txt"} -->
