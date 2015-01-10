@@ -1,0 +1,17 @@
+{include file='inc_head.txt' nav_tab='roll'}
+
+<div class="container">
+<h1>Roll {$roll.roll_id|escape}</h1>
+<p>Created: {$roll.created|date_format:"%Y-%m-%d"|escape}</p>
+<p>Emulsion ID: {$roll.emulsion_id|escape}</p>
+<p>Expiration date: {$roll.exp_date|date_format:"%Y-%m"|escape}</p>
+<p>Type: {$roll.film_type|escape}</p>
+<p>Brand: {$roll.film_brand|escape}</p>
+<p>Name: {$roll.film_name|escape}</p>
+<p>ISO: {$roll.film_speed|escape}</p>
+<p>Username: {$roll.username|escape}</p>
+<p>Full Name: {$roll.fullname|escape}</p>
+
+</div>
+
+{include file='inc_foot.txt'}

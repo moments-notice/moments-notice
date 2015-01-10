@@ -24,7 +24,7 @@
 
 {foreach from=$rolls item=roll}
 <tr>	
-	<td>{$roll.roll_id|escape}</td>
+	<td><a href="{$cfg.abs_root_url}roll/{$roll.roll_id|escape}">{$roll.roll_id|escape}</a></td>
 	<td>{$roll.username|escape}</td>
 	<td>{$roll.created|date_format:"%Y-%m-%d"|escape}</td>
 	<td>{$roll.emulsion_id|escape}</td>
