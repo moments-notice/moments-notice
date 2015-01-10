@@ -1,0 +1,45 @@
+{include file='inc_head.txt' nav_tab='rolls'}
+
+<div class="container">
+<h1>Rolls</h1>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Roll ID</th>
+		  <th>User</th>
+          <th>Created</th>
+          <th>Emusion Number</th>
+		  <th>Expriration</th>
+		  <th>Type</th>
+		  <th>Brand</th>
+		  <th>Name</th>
+		  <th>ISO</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+
+
+{foreach from=$rolls item=roll}
+<tr>	
+	<td>{$roll.roll_id|escape}</td>
+	<td>{$roll.username|escape}</td>
+	<td>{$roll.created|escape}</td>
+	<td>{$roll.emulsion_id|escape}</td>
+	<td>{$roll.exp_date|escape}</td>
+	<td>{$roll.film_type|escape}</td>
+	<td>{$roll.film_brand|escape}</td>
+	<td>{$roll.film_name|escape}</td>
+	<td>{$roll.film_speed|escape}</td>
+</tr>
+{/foreach}
+
+      </tbody>
+    </table>
+
+
+</div>
+
+{include file='inc_foot.txt'}
