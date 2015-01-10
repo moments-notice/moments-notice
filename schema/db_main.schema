@@ -58,6 +58,12 @@ CREATE TABLE `rolls` (
   `id` bigint(64) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL,
   `created` int(10) unsigned NOT NULL,
+  `emulsion_id` int(10) unsigned NOT NULL,
+  `exp_date` int(10) unsigned NOT NULL,
+  `film_type` varchar(255) DEFAULT NULL,
+  `film_brand` varchar(255) DEFAULT NULL,
+  `film_name` varchar(255) DEFAULT NULL,
+  `film_speed` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
