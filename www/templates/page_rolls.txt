@@ -9,7 +9,7 @@
           <th>Roll ID</th>
 		  <th>User</th>
           <th>Created</th>
-          <th>Emusion Number</th>
+          <th>Emulsion ID</th>
 		  <th>Expriration</th>
 		  <th>Type</th>
 		  <th>Brand</th>
@@ -26,9 +26,9 @@
 <tr>	
 	<td>{$roll.roll_id|escape}</td>
 	<td>{$roll.username|escape}</td>
-	<td>{$roll.created|escape}</td>
+	<td>{$roll.created|date_format:"%Y-%m-%d"|escape}</td>
 	<td>{$roll.emulsion_id|escape}</td>
-	<td>{$roll.exp_date|escape}</td>
+	<td>{$roll.exp_date|date_format:"%Y-%m"|escape}</td>
 	<td>{$roll.film_type|escape}</td>
 	<td>{$roll.film_brand|escape}</td>
 	<td>{$roll.film_name|escape}</td>
