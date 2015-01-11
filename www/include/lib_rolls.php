@@ -55,9 +55,9 @@
 
 	function rolls_get_all(){
 
-		$sql = "SELECT rolls.id as roll_id, rolls.created, rolls.emulsion_id, rolls.exp_date, rolls.film_type, rolls.film_brand, rolls.film_name, rolls.film_speed, users.username, users.fullname FROM rolls INNER JOIN users ON rolls.user_id=users.id";
+		$sql = "SELECT * FROM rolls";
 
-		return db_fetch($sql);
+		return db_fetch_paginated($sql);
 
 	}
 
