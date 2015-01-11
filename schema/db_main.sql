@@ -49,6 +49,8 @@ CREATE TABLE `orders` (
   `roll_id` bigint(64) unsigned NOT NULL,
   `user_id` int(10) unsigned NOT NULL,
   `created` int(10) unsigned NOT NULL,
+  `shipped` int(10) unsigned NOT NULL,
+  `returned` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
