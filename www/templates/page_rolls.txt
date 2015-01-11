@@ -7,7 +7,7 @@
       <thead>
         <tr>
           <th>Roll ID</th>
-		  <th>User</th>
+		  <th>Photographer</th>
           <th>Created</th>
           <th>Emulsion ID</th>
 		  <th>Expriration</th>
@@ -25,7 +25,7 @@
 {foreach from=$rolls.rows item=roll}
 <tr>	
 	<td><a href="{$cfg.abs_root_url}roll/{$roll.id|escape}">{$roll.id|escape}</a></td>
-	<td>{$roll.username|escape}</td>
+	<td>{$roll.fullname|escape}</td>
 	<td>{$roll.created|date_format:"%Y-%m-%d"|escape}</td>
 	<td>{$roll.emulsion_id|escape}</td>
 	<td>{$roll.exp_date|date_format:"%Y-%m"|escape}</td>
