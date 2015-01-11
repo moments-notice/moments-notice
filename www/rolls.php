@@ -4,7 +4,11 @@
 
 	loadlib("rolls");
 
-	$all_rolls = rolls_get_all();
+	if ($page = get_int32("page")){
+	   $more['page'] = $page;
+	}
+
+	$all_rolls = rolls_get_all($more);
 	
 	$rolls = array();
 
@@ -15,6 +19,7 @@
 	}
 
 	$smarty->assign('rolls', $rolls);
+	$smarty->assign("pagination", $rolls['pagination']);
 	$smarty->display('page_rolls.txt');
 
 	exit();

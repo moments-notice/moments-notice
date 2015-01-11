@@ -53,11 +53,11 @@
 
 	#################################################################
 
-	function rolls_get_all(){
+	function rolls_get_all($more=array()){
 
 		$sql = "SELECT * FROM rolls";
 
-		return db_fetch_paginated($sql);
+		return db_fetch_paginated($sql, $more);
 
 	}
 

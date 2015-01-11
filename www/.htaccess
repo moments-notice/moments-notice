@@ -76,7 +76,9 @@ RewriteRule ^invite(?:/([^/]+))?/?$	invite.php?code=$1&%{QUERY_STRING} [L]
 
 # Rolls
 RewriteRule ^rolls/?$                        rolls.php              [L]
+RewriteRule ^rolls/page(\d+)/?$		     rolls.php?page=$1	    [L]
 RewriteRule ^roll/([0-9]+)/?$		     roll.php?id=$1	    [L]
+
 # Test pages
 
 # RewriteRule ^paging/?$			paging.php		[L]

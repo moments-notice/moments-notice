@@ -39,6 +39,7 @@
       </tbody>
     </table>
 
+    {pagination pagination=$pagination style='nextprev'}
 
 </div>
 
