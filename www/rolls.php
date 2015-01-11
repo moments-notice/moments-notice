@@ -15,7 +15,9 @@
 	$rolls['pagination'] = $all_rolls['pagination'];
 
 	foreach( $all_rolls['rows'] as $roll){
-		$rolls['rows'][] = rolls_get_inflated_roll_by_id($roll['id']);
+		 if ( $roll['film_type']){
+		    $rolls['rows'][] = rolls_get_inflated_roll_by_id($roll['id']);
+		 }
 	}
 
 	$smarty->assign('rolls', $rolls);
