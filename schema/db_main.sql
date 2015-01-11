@@ -83,3 +83,16 @@ CREATE TABLE `InviteCodes` (
   KEY `by_email` (`email`),
   KEY `by_created` (`created`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `development_log`;
+
+CREATE TABLE `development_log` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `roll_id` bigint(64) unsigned NOT NULL,
+  `developed` int(10) unsigned NOT NULL,
+  `developer` varchar(255) DEFAULT NULL,
+  `development_temp` varchar(255) DEFAULT NULL,
+  `development_time` int(10) unsigned NOT NULL,
+  `development_notes text DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
