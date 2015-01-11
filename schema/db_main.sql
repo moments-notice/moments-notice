@@ -93,6 +93,6 @@ CREATE TABLE `development_log` (
   `developer` varchar(255) DEFAULT NULL,
   `development_temp` varchar(255) DEFAULT NULL,
   `development_time` int(10) unsigned NOT NULL,
-  `development_notes text DEFAULT NULL,
+  `development_notes` text DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
