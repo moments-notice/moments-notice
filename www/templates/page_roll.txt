@@ -1,7 +1,7 @@
 {include file='inc_head.txt' nav_tab='roll'}
 
 <div class="container">
-<h1>Roll {$roll.roll_id|escape}</h1>
+<h1>Roll {$roll.id|escape}</h1>
 <p>Created: {$roll.created|date_format:"%Y-%m-%d"|escape}</p>
 <p>Emulsion ID: {$roll.emulsion_id|escape}</p>
 <p>Expiration date: {$roll.exp_date|date_format:"%Y-%m"|escape}</p>
