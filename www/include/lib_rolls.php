@@ -76,6 +76,10 @@
 	function rolls_get_inflated_roll_by_id($roll_id){
 		
 		$roll = rolls_get_by_id($roll_id);
+
+		if (! $roll){
+		   return 0;
+		}
 		
 		# inflate user info
 		$user = users_get_by_id($roll['user_id']);
