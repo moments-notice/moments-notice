@@ -47,3 +47,22 @@
 
 	}
 
+	#################################################################
+
+	function orders_get_orders_count(){
+
+		 $sql = "SELECT COUNT(*) FROM orders WHERE created != 0";
+
+		 return db_single(db_fetch($sql));
+
+	}
+
+	#################################################################
+
+	function orders_get_orders_shipped(){
+
+		 $sql = "SELECT COUNT(*) FROM orders WHERE shipped != 0";
+
+		 return db_single(db_fetch($sql));
+
+	}
