@@ -3,7 +3,7 @@
 <div class="container">
 <img class="img-responsive" src="{$cfg.abs_root_url}images/banner.jpg" />
 <h1>Welcome to Moment's Notice</h1>
-<p>So far we have had {$stats.orders|escape} rolls requested, have shipped {$stats.shipped|escape} of them and developed {$stats.developed|escape}.</p>
+<p>So far we have had {$stats.orders|escape} <a href="{$cfg.abs_root_url}rolls">rolls</a> requested, have shipped {$stats.shipped|escape} of them and developed {$stats.developed|escape}.</p>
 </div>
 
 {include file='inc_foot.txt'}
