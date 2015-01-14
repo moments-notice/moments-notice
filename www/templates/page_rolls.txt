@@ -2,7 +2,7 @@
 
 <div class="container">
 <h1>Rolls</h1>
-<p>These are all of the rolls we have shipped out thus far. If you were invited but don't see your roll, it's most likely because it is awaitiing the next shipment.</p>
+<p>These are all of the rolls we have shipped out thus far. If you were invited but don't see your roll, please be patient.</p>
     <table class="table table-striped">
       <thead>
         <tr>
