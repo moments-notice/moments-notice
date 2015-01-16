@@ -96,3 +96,13 @@ CREATE TABLE `development_log` (
   `development_notes` text DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `lab_log`;
+
+CREATE TABLE `lab_log` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `mixing_date` int(10) unsigned NOT NULL,
+  `chem_name` varchar(255) DEFAULT NULL,
+  `notes` text DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;  
