@@ -80,10 +80,6 @@
 		if (! $roll){
 		   return 0;
 		}
-
-		if (! $roll['film_type']){
-		   return 0;
-		}
 		
 		# inflate user info
 		$user = users_get_by_id($roll['user_id']);

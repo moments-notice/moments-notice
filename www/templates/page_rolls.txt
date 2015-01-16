@@ -2,7 +2,7 @@
 
 <div class="container">
 <h1>Rolls</h1>
-<p>These are all of the rolls we have shipped out thus far. If you were invited but don't see your roll, please be patient.</p>
+<p>These are all of the rolls that have been requested thus far. If you've signed up but have not yet received your invitation, please be patient.</p>
     <table class="table table-striped">
       <thead>
         <tr>
@@ -23,16 +23,16 @@
 
 
 {foreach from=$rolls.rows item=roll}
-<tr>	
+<tr>
 	<td><a href="{$cfg.abs_root_url}roll/{$roll.id|escape}">{$roll.id|escape}</a></td>
 	<td>{$roll.fullname|escape}</td>
 	<td>{$roll.created|date_format:"%Y-%m-%d"|escape}</td>
-	<td>{$roll.emulsion_id|escape}</td>
-	<td>{$roll.exp_date|date_format:"%Y-%m"|escape}</td>
+	<td>{if $roll.emulsion_id != 0}{$roll.emulsion_id|escape}{/if}</td>
+	<td>{if $roll.exp_date !=0}{$roll.exp_date|date_format:"%Y-%m"|escape}{/if}</td>
 	<td>{$roll.film_type|escape}</td>
 	<td>{$roll.film_brand|escape}</td>
 	<td>{$roll.film_name|escape}</td>
-	<td>{$roll.film_speed|escape}</td>
+	<td>{if $roll.film_speed != 0}{$roll.film_speed|escape}{/if}</td>
 </tr>
 {/foreach}
 
