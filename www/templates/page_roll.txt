@@ -3,12 +3,12 @@
 <div class="container">
 <h1>Roll {$roll.id|escape}</h1>
 <p>Created: {$roll.created|date_format:"%Y-%m-%d"|escape}</p>
-<p>Emulsion ID: {$roll.emulsion_id|escape}</p>
-<p>Expiration date: {$roll.exp_date|date_format:"%Y-%m"|escape}</p>
-<p>Type: {$roll.film_type|escape}</p>
-<p>Brand: {$roll.film_brand|escape}</p>
-<p>Name: {$roll.film_name|escape}</p>
-<p>ISO: {$roll.film_speed|escape}</p>
+{if $roll.emulsion_id != 0}<p>Emulsion ID: {$roll.emulsion_id|escape}</p>{/if}
+{if $roll.exp_date != 0}<p>Expiration date: {$roll.exp_date|date_format:"%Y-%m"|escape}</p>{/if}
+{if $roll.film_type}<p>Type: {$roll.film_type|escape}</p>{/if}
+{if $roll.film_brand}<p>Brand: {$roll.film_brand|escape}</p>{/if}
+{if $roll.film_name}<p>Name: {$roll.film_name|escape}</p>{/if}
+{if $roll.film_speed != 0}<p>ISO: {$roll.film_speed|escape}</p>{/if}
 <p>Username: {$roll.username|escape}</p>
 <p>Full Name: {$roll.fullname|escape}</p>
 
