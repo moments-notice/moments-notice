@@ -2,11 +2,6 @@
     <div class="container">
       <hr>
 
-      <footer>
-		<p><a href="https://micahwalter.com/moments-notice">About Moment's Notice</a></p>
-
-      </footer>
-
     </div> <!-- /container -->
 
     {pagination_footer}
