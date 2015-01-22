@@ -10,13 +10,15 @@
 		    <span class="icon-bar"></span>
 	      </button>
     	      <a class="navbar-brand" href="{$cfg.abs_root_url}">{$cfg.site_name|escape}</a>
+	      </div>
+
+	     <div id="navbar" class="navbar-collapse collapse">
 	      <ul class="nav navbar-nav">
 	      	  <li><a href="https://micahwalter.com/moments-notice">about</a></li>
 	      	  <li><a href="https://help.moments-notice.org">help</a></li>
 		  <li><a href="{$cfg.abs_root_url}rolls">rolls</a></li>
 	      </ul>
-          </div>
-	  <div id="navbar" class="navbar-collapse collapse">
+
 	       <ul class="nav navbar-nav navbar-right">
 	       </ul>
 	  </div>
