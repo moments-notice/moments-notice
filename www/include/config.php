@@ -103,19 +103,13 @@
 
 	# email
 	
-	$GLOBALS['cfg']['email_from_name']	= 'Moments Notice';
-	$GLOBALS['cfg']['email_from_email']	= 'micah@micahwalter.com';
+	$GLOBALS['cfg']['email_from_name']	= 'Moment\'s Notice';
+	$GLOBALS['cfg']['email_from_email']	= 'momentsnoticeproject@gmail.com';
 	$GLOBALS['cfg']['auto_email_args']	= '';
 	
 	# Built email support
 	
 	$GLOBALS['cfg']['enable_feature_email_php'] = 0;
-	
-	# SendGrid email Support
-	
-	$GLOBALS['cfg']['enable_feature_email_sendgrid'] = 0;
-	$GLOBALS['cfg']['email_sendgrid_username'] = 'cooperhewitt';
-	$GLOBALS['cfg']['email_sendgrid_password'] = 'READ-FROM-SECRETS';
 	
 	# Mandrill email Support
 	
@@ -244,8 +238,6 @@
 	# Always load (if feature flag is enabled)
 
 	$GLOBALS['cfg']['autoload_libs_if_enabled'] = array(
-		# 'some_feature_flag' => array('lib1', 'lib2')
 		'email_mandrill' => array('email', 'email_mandrill'), 
 		'email_php' => array('email', 'email_php'),
-		'email_sendgrid' => array('email', 'email_sendgrid'),
 	);
