@@ -2,8 +2,29 @@
 
 <div class="container">
 <img class="img-responsive" src="{$cfg.abs_root_url}images/banner.jpg" />
+<br />
+
 <h1>Welcome to Moment's Notice</h1>
 <p>So far we have had {$stats.orders|escape} <a href="{$cfg.abs_root_url}rolls">rolls</a> requested, have shipped {$stats.shipped|escape} of them and developed {$stats.developed|escape}.</p>
+
+<div class="row">
+  <div class="col-md-4">
+<!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup"><form id="mc-embedded-subscribe-form" class="validate form-inline"" action="//micahwalter.us2.list-manage.com/subscribe/post?u=b9087a7641b069756fa341e6c&amp;id=bbd9ab1c2a" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+<div id="mc_embed_signup_scroll">
+<div class="form-group">
+<input id="mce-EMAIL" class="email form-control" name="EMAIL" required="" type="email" value="" placeholder="email address" />
+<input id="mc-embedded-subscribe" class="btn btn-primary" name="subscribe" type="submit" value="Sign Up!" />
+<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+<div style="position: absolute; left: -5000px;"><input tabindex="-1" name="b_b9087a7641b069756fa341e6c_bbd9ab1c2a" type="text" value="" /></div>
+
+
+</div>
+</form></div>
+</div>
+<!--End mc_embed_signup-->
+</div>
+</div>
 </div>
 
 {include file='inc_foot.txt'}

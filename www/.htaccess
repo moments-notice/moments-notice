@@ -79,7 +79,8 @@ RewriteRule ^rolls/?$                        rolls.php              [L]
 RewriteRule ^rolls/page(\d+)/?$		     rolls.php?page=$1	    [L]
 RewriteRule ^roll/([0-9]+)/?$		     roll.php?id=$1	    [L]
 
-# Test pages
+# Shlong
 
-# RewriteRule ^paging/?$			paging.php		[L]
-# RewriteRule ^paging/page(\d+)/?$	paging.php?page=$1	[L,QSA]
+RewriteRule ^shlong-create/?$		     shlong_create.php	[L,QSA]
+
+RewriteRule ^([a-zA-Z0-9]+)/?$ 		     shlong.php?short_url=$1&%{QUERY_STRING} [L]

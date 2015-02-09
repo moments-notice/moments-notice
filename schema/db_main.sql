@@ -106,3 +106,15 @@ CREATE TABLE `lab_log` (
   `notes` text DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;  
+
+DROP TABLE IF EXISTS ShlongUrls;
+
+CREATE TABLE ShlongUrls (
+    `id` bigint(64) unsigned NOT NULL AUTO_INCREMENT,
+    `short_url`   VARCHAR(255) NOT NULL,
+    `long_url`    TEXT,
+    `shortened`   TIMESTAMP,
+    INDEX `long_urls` (long_url(255)),
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `short` (`short_url`)
+) ENGINE=InnoDB, CHARACTER SET utf8;
