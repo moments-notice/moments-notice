@@ -50,14 +50,14 @@ RewriteEngine on
 # Login stuff
 
 # RewriteRule  ^signup/?$			signup.php		[L]
-# RewriteRule  ^signin/?$			signin.php		[L]
-# RewriteRule  ^signout/?$		signout.php		[L]
-# RewriteRule  ^checkcookie/?$		checkcookie.php	[L]
+RewriteRule  ^signin/?$			signin.php		[L]
+RewriteRule  ^signout/?$		signout.php		[L]
+RewriteRule  ^checkcookie/?$		checkcookie.php	[L]
 
 # Password retrieval stuff
 
-# RewriteRule ^forgot/?$			forgot.php		[L]
-# RewriteRule ^reset/([a-zA-Z0-9]+)/?$	reset.php?reset=$1	[L,QSA]
+RewriteRule ^forgot/?$			forgot.php		[L]
+RewriteRule ^reset/([a-zA-Z0-9]+)/?$	reset.php?reset=$1	[L,QSA]
 
 # Account stuff
 
