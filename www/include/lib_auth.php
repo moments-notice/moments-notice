@@ -1,41 +1,76 @@
 <?php
-	#
-	# This library handles administrative authentication for the application,
-	# which is separated from user-authentication.
-	#
-	# By default, we simply treat all users as admins when the environment is
-	# set to dev, or calls are being made from the command line.
-	#
-	# This is an apporpriate place to plug in something like GodAuth
-	# to handle actual role-based authentication.
-	# https://github.com/exflickr/GodAuth/
- 	#
-
-	auth_init();
 
 	########################################################################
 
-	function auth_init(){
+	function auth_has_role($role, $who=0){
 
-		$GLOBALS['cfg']['auth_roles'] = array();
+		$who = ($who) ? $who : $GLOBALS['cfg']['user']['id'];
 
-		if ($GLOBALS['cfg']['environment'] == 'dev'){
-
-			$GLOBALS['cfg']['auth_roles']['staff'] = 1;
+		if (! $who){
+			return 0;
 		}
 
-		if ($GLOBALS['this_is_shell']){
-
-			$GLOBALS['cfg']['auth_roles']['staff'] = 1;
+		if (! isset($GLOBALS['cfg']['auth_users'][$who])){
+			return 0;
 		}
 
+		$details = $GLOBALS['cfg']['auth_users'][$who];
+		$roles = $details['roles'];
+
+		return (in_array($role, $roles)) ? 1 : 0;
 	}
 
 	########################################################################
 
-	function auth_has_role($role){
+	function auth_has_role_any($roles, $who=0){
 
-		return !!$GLOBALS['cfg']['auth_roles'][$role];
+		if (! is_array($roles)){
+			return 0;
+		}
+
+		foreach ($roles as $role){
+
+			if (auth_has_role($role, $who)){
+				return 1;
+			}
+		}
+
+		return 0;
 	}
 
 	########################################################################
+
+	function auth_has_role_all($roles, $who=0){
+
+		if (! is_array($roles)){
+			return 0;
+		}
+
+		foreach ($roles as $role){
+
+			if (! auth_has_role($role, $who)){
+				return 0;
+			}
+		}
+
+		return 1;
+	}
+
+	########################################################################
+
+	# Not sure about these... (20140113/straup)
+
+	function auth_is_admin($user_id=0){
+		$roles = array('admin');
+		return (auth_has_role_any($roles, $user_id)) ? 1 : 0;
+	}
+
+	function auth_is_staff($user_id=0){
+
+		$roles = array('admin', 'staff');
+		return (auth_has_role_any($roles, $user_id)) ? 1 : 0;
+	}
+
+	########################################################################
+
+	# the end
