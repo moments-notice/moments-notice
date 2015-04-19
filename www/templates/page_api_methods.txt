@@ -1,8 +1,10 @@
-{capture assign="page_title}API methods | API{/capture}
+{capture assign="page_title"}API methods | API{/capture}
+{capture assign="nav_tab"}API Methods{/capture}
 {include file="inc_head.txt"}
 
 {include file="inc_api_header.txt" title="API methods"}
 
+<div class="container">
 <div id="api_methods">
 
 {foreach from=$method_classes item="methods" key="class"}
@@ -20,5 +22,5 @@
 {/foreach}
 
 </div>
-
+</div>
 {include file="inc_foot.txt"}

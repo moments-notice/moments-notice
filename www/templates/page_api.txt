@@ -1,12 +1,15 @@
 {capture assign="page_title"}API{/capture}
+{capture assign="nav_tab"}API Home{/capture}
+
 {include file="inc_head.txt"}
 
 {capture assign="title"}Application Programming Interface (API){/capture}
 {include file="inc_api_header.txt" title=$title}
 
 {if "api_documentation"|@features_is_enabled}
-
+<div class="container">
 <div class="api-sect">
+<h2>Welcome</h2>
 <p><a href="{$cfg.abs_root_url}">{$cfg.site_name|escape}</a> provides a REST-ish style application programming interface (API) for developers to use in their products and services. API requests are made by passing one or more query parameters to:</p>
 
 <p class="api-link"><code>{$cfg.api_abs_root_url}{$cfg.api_endpoint}</code></p>
@@ -50,6 +53,8 @@
 
 </div>
 
+
+</div>
 {/if}
 
 {include file="inc_foot.txt"}

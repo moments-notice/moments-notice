@@ -61,14 +61,14 @@ RewriteEngine on
 # Note that this is a api.example.com host not example.com
 # (20121025/straup)
 
-# RewriteCond %{HTTP_HOST}	^api.(.*)$
-# RewriteCond %{HTTPS} off
-# RewriteRule (.*) https://%{HTTP_HOST}/$1?%{QUERY_STRING}	[R,L]
+RewriteCond %{HTTP_HOST}	^api.(.*)$
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}/$1?%{QUERY_STRING}	[R,L]
 
 # The most basic rewrite, as this is the actual API
 
-# RewriteCond %{HTTP_HOST}   ^api.(.*)$
-# RewriteRule  ^rest/?$		api_rest.php?%{QUERY_STRING}  [L]
+RewriteCond %{HTTP_HOST}   ^api.(.*)$
+RewriteRule  ^rest/?$		api_rest.php?%{QUERY_STRING}  [L]
 
 # This one says: If we're the API and we're not hanging off /rest
 # redirect to the site itself – note the %1% for capturing the domain

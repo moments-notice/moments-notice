@@ -1,12 +1,17 @@
+<div class="container">
 <div id="api-header">
 <h1>{$title|escape}</h1>
-<h2>
-<a href="{$cfg.abs_root_url}api/">API documentation</a>
- – <a href="{$cfg.abs_root_url}api/methods/">API methods</a>
+
+<ul class="nav nav-tabs">
+    <li {if $nav_tab == 'API Home'} class="active"{/if}><a href="{$cfg.abs_root_url}api/">API documentation</a></li>
+    <li {if $nav_tab == 'API Methods'} class="active"{/if}><a href="{$cfg.abs_root_url}api/methods/">API methods</a></li>
 {if "api_register_keys"|@features_is_enabled}
- – <a href="{$cfg.abs_root_url}api/keys/register/">Create a new API key</a>
- – <a href="{$cfg.abs_root_url}api/keys/">Your API keys</a>
+    <li {if $nav_tab == 'API Register'} class="active"{/if}><a href="{$cfg.abs_root_url}api/keys/register/">Create a new API key</a></li>
+    <li {if $nav_tab == 'API Keys'} class="active"{/if}><a href="{$cfg.abs_root_url}api/keys/">Your API keys</a></li>
 {/if}
-{if "api_delegated_auth"|@features_is_enabled} – <a href="{$cfg.abs_root_url}api/oauth2/tokens/">Your access tokens</a>{/if}
-</h2>
+{if "api_delegated_auth"|@features_is_enabled}
+    <li {if $nav_tab == 'API Tokens'} class="active"{/if}><a href="{$cfg.abs_root_url}api/oauth2/tokens/">Your access tokens</a></li>
+{/if}
+</ul>
+</div>
 </div>
