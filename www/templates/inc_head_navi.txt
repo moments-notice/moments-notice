@@ -19,6 +19,7 @@
 		  <li><a target="_blank" href="https://medium.com/moments-notice-lab">lab</a></li>
 	      	  <li><a target="_blanl" href="https://help.moments-notice.org">help</a></li>
 		  <li><a href="{$cfg.abs_root_url}rolls">rolls</a></li>
+		  <li><a href="{$cfg.abs_root_url}darkroom">darkroom</a></li>
 	      </ul>
 
 	       <ul class="nav navbar-nav navbar-right">

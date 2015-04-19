@@ -1,0 +1,13 @@
+{include file='inc_head.txt' nav_tab='rolls'}
+
+<div class="container">
+<h1>Darkroom Logs</h1>
+<p>These are some logs about what's been happening in the lab.</p>
+
+<ul>
+<li><a href="{$cfg.abs_root_url}darkroom/chemistry">Chemistry Lab</a></li>
+</ul>
+
+</div>
+
+{include file='inc_foot.txt'}

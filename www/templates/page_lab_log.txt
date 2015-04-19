@@ -1,7 +1,7 @@
 {include file='inc_head.txt' nav_tab='rolls'}
 
 <div class="container">
-<h1>Lab Log</h1>
+<h1>Chem Lab Log</h1>
 <p>This is a log of chemistry mixed in the darkroom.</p>
     <table class="table table-striped">
       <thead>
