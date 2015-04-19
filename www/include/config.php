@@ -49,7 +49,7 @@
 
 	# hard coding this URL will ensure it works in cron mode too
 
-	$GLOBALS['cfg']['server_scheme'] = 'https'; #(isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on')) ? 'https' : 'http';
+	$GLOBALS['cfg']['server_scheme'] = (isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on')) ? 'https' : 'http';
 	$GLOBALS['cfg']['server_name'] = isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : 'fake.com';
 
 	$GLOBALS['cfg']['abs_root_url']		= "{$GLOBALS['cfg']['server_scheme']}://{$GLOBALS['cfg']['server_name']}/";
@@ -201,11 +201,12 @@
 	# Feature flags
 	#
 
-	$GLOBALS['cfg']['enable_feature_signup'] = 0;
+	$GLOBALS['cfg']['enable_feature_signup'] = 1;
 	$GLOBALS['cfg']['enable_feature_signin'] = 1;
 	$GLOBALS['cfg']['enable_feature_persistent_login'] = 1;
 	$GLOBALS['cfg']['enable_feature_account_delete'] = 0;
 	$GLOBALS['cfg']['enable_feature_password_retrieval'] = 1;
+
 	$GLOBALS['cfg']['enable_feature_artisanal_integers'] = 1;
 
 	#
