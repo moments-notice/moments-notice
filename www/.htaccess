@@ -144,6 +144,10 @@ RewriteRule ^rolls/?$                        rolls.php              [L]
 RewriteRule ^rolls/page(\d+)/?$		     rolls.php?page=$1	    [L]
 RewriteRule ^roll/([0-9]+)/?$		     roll.php?id=$1	    [L]
 
+# Lab Log
+RewriteRule ^lab/chemistry/?$                        lab_log.php              [L]
+RewriteRule ^lab/chemistry/page(\d+)/?$		     lab_log.php?page=$1	    [L]
+
 # Shlong
 
 RewriteRule ^shlong-create/?$		     shlong_create.php	[L,QSA]

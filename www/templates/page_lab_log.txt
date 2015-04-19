@@ -1,0 +1,36 @@
+{include file='inc_head.txt' nav_tab='rolls'}
+
+<div class="container">
+<h1>Lab Log</h1>
+<p>This is a log of chemistry mixed in the darkroom.</p>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Log ID</th>
+          <th>Mixing Date</th>
+          <th>Chemistry Name</th>
+		  <th>Notes</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+
+
+{foreach from=$logs.rows item=log}
+<tr>
+	<td>{$log.id|escape}</a></td>
+	<td>{$log.mixing_date|date_format:"%Y-%m-%d"|escape}</td>
+	<td>{$log.chem_name|escape}</td>
+	<td>{$log.notes|escape}</td>
+</tr>
+{/foreach}
+
+      </tbody>
+    </table>
+
+    {pagination pagination=$pagination style='nextprev'}
+
+</div>
+
+{include file='inc_foot.txt'}
