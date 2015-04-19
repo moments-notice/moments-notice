@@ -1,0 +1,21 @@
+{include file='inc_head.txt' nav_tab='admin'}
+
+<div class="container" id="stuff">
+  <div class="row">
+
+    <div>
+    <h3>You are the admin!</h3>
+	
+	<ul>
+	<li><a href="{$cfg.abs_root_url}admin/darkroom">Darkroom</a></li>
+	<li><a href="{$cfg.abs_root_url}admin/orders">Orders</a></li>
+	<li><a href="{$cfg.abs_root_url}admin/users">Users</a></li>
+	</ul>
+
+	</div>
+
+
+  </div>
+</div>
+
+{include file='inc_foot.txt'}

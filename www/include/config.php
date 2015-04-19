@@ -101,6 +101,11 @@
 	);
 
 
+	# Auth users
+	$GLOBALS['cfg']['auth_users'] = array(
+	      # Defined in secrets
+	);
+
 	# email
 	
 	$GLOBALS['cfg']['email_from_name']	= 'Moment\'s Notice';
