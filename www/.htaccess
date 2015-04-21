@@ -149,6 +149,14 @@ RewriteRule ^darkroom/?$                     lab.php              [L]
 RewriteRule ^darkroom/chemistry/?$           lab_log.php              [L]
 RewriteRule ^darkroom/chemistry/page(\d+)/?$	lab_log.php?page=$1	    [L]
 
+# Admin
+RewriteRule ^admin/?$					admin.php              [L]
+RewriteRule ^admin/darkroom/?$               		admin_lab.php              [L]
+RewriteRule ^admin/darkroom/chemistry?$      		admin_lab_log.php              [L]
+RewriteRule ^admin/darkroom/chemistry/page(\d+)/?$	admin_lab_log.php?page=$1	    [L]
+RewriteRule ^admin/orders/page(\d+)/?$			admin_orders.php?page=$1	    [L]
+RewriteRule ^admin/users/page(\d+)/?$			admin_users.php?page=$1	    [L]
+
 # Shlong
 
 RewriteRule ^shlong-create/?$		     shlong_create.php	[L,QSA]
