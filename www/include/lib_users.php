@@ -266,3 +266,11 @@
 	}
 
 	#################################################################
+
+	function users_get_all($more=array()){
+
+		$sql = "SELECT * FROM users ORDER BY id DESC";
+
+		return db_fetch_paginated($sql, $more);
+
+	}

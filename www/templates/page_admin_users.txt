@@ -1,0 +1,40 @@
+{include file='inc_head.txt' nav_tab='users'}
+
+<div class="container">
+<h1>Users</h1>
+<p>This is all the users. | <a href="{$cfg.abs_root_url}admin/users/create">Create new user</a></p>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>Username</th>
+          <th>Full Name</th>
+		  <th>Email</th>
+		  <th>Created</th>
+		  <th>Deleted</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+
+
+{foreach from=$users.rows item=user}
+<tr>
+	<td>{$user.id|escape}</a></td>
+	<td>{$user.username|escape}</td>
+	<td>{$user.fullname|escape}</td>
+	<td>{$user.email|escape}</td>
+	<td>{$user.created|date_format:"%Y-%m-%d"|escape}</td>
+	<td>{if $user.deleted}{$user.deleted|date_format:"%Y-%m-%d"|escape}{/if}</td>
+</tr>
+{/foreach}
+
+      </tbody>
+    </table>
+
+    {pagination pagination=$pagination style='nextprev'}
+
+</div>
+
+{include file='inc_foot.txt'}

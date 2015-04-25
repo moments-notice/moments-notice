@@ -156,6 +156,7 @@ RewriteRule ^admin/darkroom/chemistry?$      		admin_lab_log.php              [L
 RewriteRule ^admin/darkroom/chemistry/page(\d+)/?$	admin_lab_log.php?page=$1	    [L]
 RewriteRule ^admin/darkroom/chemistry/create?$      	admin_lab_log_create.php              [L]
 RewriteRule ^admin/orders/page(\d+)/?$			admin_orders.php?page=$1	    [L]
+RewriteRule ^admin/users/?$      			admin_users.php              [L]
 RewriteRule ^admin/users/page(\d+)/?$			admin_users.php?page=$1	    [L]
 RewriteRule ^admin/invites/?$      			admin_invite_codes.php              [L]
 RewriteRule ^admin/invites/page(\d+)/?$			admin_invite_codes.php?page=$1	    [L]
