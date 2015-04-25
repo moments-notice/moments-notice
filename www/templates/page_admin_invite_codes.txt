@@ -1,0 +1,42 @@
+{include file='inc_head.txt' nav_tab='rolls'}
+
+<div class="container">
+<h1>Invite Codes</h1>
+<p>All of the invite codes. | <a href="{$cfg.abs_root_url}admin/invite/create">Invite user</a></p>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Created</th>
+		  <th>Sent</th>		  
+		  <th>Redeemed</th>
+		  <th>User ID</th>
+		  <th>Invited By</th>
+          <th>Code</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+
+
+{foreach from=$codes.rows item=code}
+<tr>
+	<td>{$code.email|escape}</a></td>
+	<td>{$code.created|date_format:"%Y-%m-%d"|escape}</td>
+	<td>{$code.sent|date_format:"%Y-%m-%d"|escape}</td>
+	<td>{if $code.redeemed}{$code.redeemed|date_format:"%Y-%m-%d"|escape}{/if}</td>
+	<td>{$code.user_id|escape}</td>
+	<td>{$code.invited_by|escape}</td>
+	<td>{$code.code|escape}</a></td>	
+</tr>
+{/foreach}
+
+      </tbody>
+    </table>
+
+    {pagination pagination=$pagination style='nextprev'}
+
+</div>
+
+{include file='inc_foot.txt'}
