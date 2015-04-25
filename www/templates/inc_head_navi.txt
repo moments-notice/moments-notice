@@ -29,7 +29,7 @@
 		       	   <a href="#" id="navi-account" class="dropdown-toggle navi-label" data-toggle="dropdown" role="button">{$cfg.user.username|escape} <b class="caret caret-ch"></b></a>
 			   <ul class="dropdown-menu" role="menu">
 			       
-			       
+			       {if "admin"|@auth_has_role:$cfg.user.id}<li id="signout"><a href="{$cfg.abs_root_url}admin/">admin</a></li>{/if}
 			       <li id="signout"><a href="{$cfg.abs_root_url}signout/">sign out</a></li>
 			   </ul>
 		       </li>
