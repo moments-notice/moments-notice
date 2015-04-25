@@ -184,7 +184,8 @@
 			$now = time();
 			
 			$update = array(
-				"redeemed" => $now
+				"redeemed" => $now,
+				"user_id" => $user['id'],
 			);
 			
 			invite_codes_update($invite, $update);
