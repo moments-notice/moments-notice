@@ -7,7 +7,7 @@
     <h3>You are the admin!</h3>
 	
 	<ul>
-	<li><a href="{$cfg.abs_root_url}admin/darkroom">Darkroom</a></li>
+	<li><a href="{$cfg.abs_root_url}admin/darkroom/chemistry">Darkroom</a></li>
 	<li><a href="{$cfg.abs_root_url}admin/orders">Orders</a></li>
 	<li><a href="{$cfg.abs_root_url}admin/users">Users</a></li>
 	</ul>
