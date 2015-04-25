@@ -316,3 +316,10 @@
 	}
 
 	#################################################################
+
+	function invite_codes_get_all_redeemed(){
+
+		$sql = "SELECT * FROM InviteCodes WHERE redeemed != 0";
+
+		return db_fetch($sql);
+	}

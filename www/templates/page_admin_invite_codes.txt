@@ -26,7 +26,7 @@
 	<td>{$code.created|date_format:"%Y-%m-%d"|escape}</td>
 	<td>{$code.sent|date_format:"%Y-%m-%d"|escape}</td>
 	<td>{if $code.redeemed}{$code.redeemed|date_format:"%Y-%m-%d"|escape}{/if}</td>
-	<td>{$code.user_id|escape}</td>
+	<td>{if $code.redeemed}{$code.user_id|escape}{/if}</td>
 	<td>{$code.invited_by|escape}</td>
 	<td>{$code.code|escape}</a></td>	
 </tr>
