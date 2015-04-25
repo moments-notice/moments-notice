@@ -1,0 +1,42 @@
+{include file='inc_head.txt' nav_tab='orders'}
+
+<div class="container">
+<h1>Orders</h1>
+<p>This is all the orders. | <a href="{$cfg.abs_root_url}admin/orders/create">Create new user</a></p>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>User ID</th>
+          <th>Roll ID</th>
+		  <th>Shipping Address ID</th>
+		  <th>Created</th>
+		  <th>Shipped</th>
+		  <th>Returned</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+
+
+{foreach from=$orders.rows item=order}
+<tr>
+	<td>{$order.id|escape}</a></td>
+	<td>{$order.username|escape}</td>
+	<td><a href="{$cfg.abs_root_url}roll/{$order.roll_id}">{$order.roll_id|escape}</a></td>
+	<td>{$order.shipping_address_id|escape}</td>
+	<td>{$order.created|date_format:"%Y-%m-%d"|escape}</td>
+	<td>{if $order.shipped}{$order.shipped|date_format:"%Y-%m-%d"|escape}{/if}</td>
+	<td>{if $order.returned}{$order.returned|date_format:"%Y-%m-%d"|escape}{/if}</td>
+</tr>
+{/foreach}
+
+      </tbody>
+    </table>
+
+    {pagination pagination=$pagination style='nextprev'}
+
+</div>
+
+{include file='inc_foot.txt'}

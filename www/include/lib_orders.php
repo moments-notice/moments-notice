@@ -66,3 +66,13 @@
 		 return db_single(db_fetch($sql));
 
 	}
+
+	#################################################################
+
+	function orders_get_all($more=array()){
+
+		$sql = "SELECT * FROM orders ORDER BY id DESC";
+
+		return db_fetch_paginated($sql, $more);
+
+	}
