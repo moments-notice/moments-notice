@@ -7,6 +7,7 @@
       <thead>
         <tr>
           <th>Log ID</th>
+          <th>Roll ID</th>
           <th>Development Date</th>
           <th>Developer</th>
           <th>Development Temp</th>
@@ -21,7 +22,8 @@
 
 {foreach from=$logs.rows item=log}
 <tr>
-	<td>{$log.id|escape}</a></td>
+	<td>{$log.id|escape}</td>
+	<td>{if $log.roll_id != 0 }<a href="{$cfg.abs_root_url}roll/{$log.roll_id}">{$log.roll_id|escape}</a>{/if}</td>
 	<td>{if $log.developed != 0}{$log.developed|date_format:"%Y-%m-%d"|escape}{/if}</td>
 	<td>{$log.developer|escape}</td>
 	<td>{$log.development_temp|escape}</td>

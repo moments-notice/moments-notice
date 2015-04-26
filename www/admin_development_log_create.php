@@ -15,12 +15,14 @@
 	if (post_isset('create') && crumb_check($crumb_key)){
 		
 		## create a new log entry
+		$roll = request_str("roll");
 		$developer = request_str("developer");
 		$temp = request_str("temp");
 		$time = request_str("time");
 		$notes = request_str("notes");
 
 		$log = array(
+			"roll_id" => $roll,
 			"developer" => $developer,
 			"development_time" => $time,
 			"development_temp" => $temp,
