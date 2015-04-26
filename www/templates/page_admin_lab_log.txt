@@ -20,7 +20,7 @@
 {foreach from=$logs.rows item=log}
 <tr>
 	<td>{$log.id|escape}</a></td>
-	<td>{$log.mixing_date|date_format:"%Y-%m-%d"|escape}</td>
+	<td>{if $log.mixing_date != 0}{$log.mixing_date|date_format:"%Y-%m-%d"|escape}{/if}</td>
 	<td>{$log.chem_name|escape}</td>
 	<td>{$log.notes|escape}</td>
 </tr>

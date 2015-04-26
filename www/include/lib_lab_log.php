@@ -4,6 +4,8 @@
 
 	function lab_log_create_log($log){
 
+		$log['mixing_date'] = time();
+
 		$hash = array();
 		foreach ($log as $k => $v){
 			$hash[$k] = AddSlashes($v);
