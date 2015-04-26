@@ -6,6 +6,7 @@
 
 <ul>
 <li><a href="{$cfg.abs_root_url}darkroom/chemistry">Chemistry Lab</a></li>
+<li><a href="{$cfg.abs_root_url}darkroom/development">Development Log</a></li>
 </ul>
 
 </div>

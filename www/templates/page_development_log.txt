@@ -1,0 +1,40 @@
+{include file='inc_head.txt' nav_tab='devlog'}
+
+<div class="container">
+<h1>Development Log</h1>
+<p>This is a log of rolls processed in the darkroom.</p>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Log ID</th>
+          <th>Development Date</th>
+          <th>Developer</th>
+          <th>Development Temp</th>
+          <th>Development Time</th>
+		  <th>Notes</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+
+
+{foreach from=$logs.rows item=log}
+<tr>
+	<td>{$log.id|escape}</a></td>
+	<td>{if $log.developed != 0}{$log.developed|date_format:"%Y-%m-%d"|escape}{/if}</td>
+	<td>{$log.developer|escape}</td>
+	<td>{$log.development_temp|escape}</td>
+	<td>{$log.development_time|escape}</td>
+	<td>{$log.development_notes|escape}</td>
+</tr>
+{/foreach}
+
+      </tbody>
+    </table>
+
+    {pagination pagination=$pagination style='nextprev'}
+
+</div>
+
+{include file='inc_foot.txt'}

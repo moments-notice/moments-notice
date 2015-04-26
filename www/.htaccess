@@ -148,6 +148,9 @@ RewriteRule ^roll/([0-9]+)/?$		     roll.php?id=$1	    [L]
 RewriteRule ^darkroom/?$                     lab.php              [L]
 RewriteRule ^darkroom/chemistry/?$           lab_log.php              [L]
 RewriteRule ^darkroom/chemistry/page(\d+)/?$	lab_log.php?page=$1	    [L]
+RewriteRule ^darkroom/development/?$           development_log.php              [L]
+RewriteRule ^darkroom/development/page(\d+)/?$	development_log.php?page=$1	    [L]
+
 
 # Admin
 RewriteRule ^admin/?$					admin.php              [L]
