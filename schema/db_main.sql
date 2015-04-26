@@ -69,6 +69,17 @@ CREATE TABLE `rolls` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `photos`;
+
+CREATE TABLE `photos` (
+  `id` bigint(64) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `created` int(10) unsigned NOT NULL,
+  `filename` varchar(255) DEFAULT NULL,
+  `secret` char(16) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
 DROP TABLE IF EXISTS `InviteCodes`;
 
 CREATE TABLE `InviteCodes` (
