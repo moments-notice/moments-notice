@@ -43,7 +43,7 @@
 
 	# count number of images as photos
 
-	foreach ($files as $file){
+	foreach ($files as $key => $file){
 
 		if($file !== '.' && $file !== '..'){
 			echo "Processing: " . $file . "\n";
@@ -69,6 +69,7 @@
 				"id" => $brooklynt['integer'],
 				"user_id" => $opts['user'],
 				"roll_id" => $opts['roll'],
+				"frame" => $key,
 				"filename" => $filename,
 				"secret" => $secret,
 			);
