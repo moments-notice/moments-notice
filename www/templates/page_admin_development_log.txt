@@ -22,7 +22,7 @@
 
 {foreach from=$logs.rows item=log}
 <tr>
-	<td>{$log.id|escape}</td>
+	<td><a href="{$cfg.abs_root_url}admin/darkroom/development/edit/{$log.id|escape}">{$log.id|escape}</a></td>
 	<td>{if $log.roll_id != 0 }<a href="{$cfg.abs_root_url}roll/{$log.roll_id}">{$log.roll_id|escape}</a>{/if}</td>
 	<td>{if $log.developed != 0}{$log.developed|date_format:"%Y-%m-%d"|escape}{/if}</td>
 	<td>{$log.developer|escape}</td>

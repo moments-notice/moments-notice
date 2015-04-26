@@ -1,0 +1,80 @@
+{capture assign="page_title"}Development log entry | Darkroom{/capture}
+{include file="inc_head.txt"}
+
+
+<div class="container">
+	<div class="row">
+
+{if $error}
+<p class="error">{$error|escape}</p>
+{/if}
+
+<form class="form-horizontal" method="POST" action="{$cfg.abs_root_url}admin/darkroom/development/edit/{$log.id|escape}" accept-encoding="UTF-8">
+	{$crumb_key|crumb_input}
+	<input type="hidden" name="edit" value="1" />
+
+<fieldset>
+
+<!-- Form Name -->
+<legend>Development Log Entry</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="roll">Roll ID</label>  
+  <div class="col-md-5">
+  <input id="roll" name="roll" type="text" placeholder="" class="form-control input-md" required="" value="{$log.roll_id}">
+    
+  </div>
+</div>
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="developer">Developer</label>  
+  <div class="col-md-5">
+  <input id="developer" name="developer" type="text" placeholder="" class="form-control input-md" required="" value="{$log.developer}">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="temp">Temp</label>  
+  <div class="col-md-5">
+  <input id="temp" name="temp" type="text" placeholder="" class="form-control input-md" required="" value="{$log.development_temp}">
+  <span class="help-block">Temp in degrees fahrenheit</span>  
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="time">Time</label>  
+  <div class="col-md-5">
+  <input id="time" name="time" type="text" placeholder="" class="form-control input-md" required="" value="{$log.development_time}">
+  <span class="help-block">Time in seconds</span>  
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="notes">Notes</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="notes" name="notes">{$log.development_notes}</textarea>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="update"></label>
+  <div class="col-md-4">
+    <button id="update" name="update" class="btn btn-primary">Update</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+</div>
+</div>
+
+{include file="inc_foot.txt"}
