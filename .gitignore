@@ -6,3 +6,4 @@ tests/coverage.state
 coverage/
 vendor/
 composer.phar
+www/assets
