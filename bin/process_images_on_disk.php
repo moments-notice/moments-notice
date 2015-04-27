@@ -35,6 +35,7 @@
 		"path" => array("flag" => "p", "required" => 1, "help" => "specify the path to a folder of images"),
 		"user" => array("flag" => "u", "required" => 1, "help" => "specify the associated user id"),
 		"roll" => array("flag" => "r", "required" => 1, "help" => "specify the roll id"),
+		"offset" => array("flag" => "o", "required" => 0, "help" => "specify an frame number offset"),
 	);
 
 	$opts = cli_getopts($spec);
@@ -42,7 +43,13 @@
 	$files = scandir($opts['path']);
 
 	# count number of images as photos
-
+	
+	if ( $opts['offset']){
+		$offset = $opts['offset'];
+	} else {
+		$offset = 0;
+	}
+	
 	foreach ($files as $key => $file){
 
 		if($file !== '.' && $file !== '..'){
@@ -69,7 +76,7 @@
 				"id" => $brooklynt['integer'],
 				"user_id" => $opts['user'],
 				"roll_id" => $opts['roll'],
-				"frame" => $key,
+				"frame" => $key+2+$offset,
 				"filename" => $filename,
 				"secret" => $secret,
 			);
