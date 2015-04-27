@@ -76,7 +76,7 @@
 				"id" => $brooklynt['integer'],
 				"user_id" => $opts['user'],
 				"roll_id" => $opts['roll'],
-				"frame" => $key+2+$offset,
+				"frame" => $key-2+$offset,
 				"filename" => $filename,
 				"secret" => $secret,
 			);
