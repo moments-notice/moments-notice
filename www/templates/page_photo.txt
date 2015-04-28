@@ -1,0 +1,10 @@
+{include file='inc_head.txt' nav_tab='photo'}
+
+<div class="container">
+
+	<div><img class="img-responsive" src="{$cfg.abs_root_url}assets/{$photo.roll_id|escape}/{$photo.filename|escape}" /></div>
+	<h1>{$photo.id|escape}</h1>
+
+</div>
+
+{include file='inc_foot.txt'}

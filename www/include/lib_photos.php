@@ -42,3 +42,23 @@
 
 	}
 
+	#######################################################
+
+	function photos_get_photo_by_id($id){
+
+		$sql = "SELECT * FROM photos WHERE id=".intval($id);
+
+		return db_single(db_fetch($sql));
+
+	}
+
+	#######################################################
+
+	function photos_get_photos_by_roll($roll_id){
+
+		$sql = "SELECT * FROM photos WHERE roll_id=".intval($roll_id);
+
+		return db_fetch($sql);
+
+	}
+
