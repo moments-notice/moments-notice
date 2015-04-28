@@ -16,8 +16,6 @@
 	<li><a href="{$cfg.abs_root_url}photo.php?id={$photo.id|escape}">{$photo.id|escape}</a></li>
 {/foreach}
 
-{$photos|@dumper}
-
 </div>
 
 {include file='inc_foot.txt'}
