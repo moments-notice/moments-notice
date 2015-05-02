@@ -37,7 +37,8 @@
 	$GLOBALS['loaded_libs'] = array();
 
 	define('FLAMEWORK_INCLUDE_DIR', dirname(__FILE__).'/');
-
+	define('SECRETS_DIR', realpath(dirname(__FILE__).'/../../../secrets/').'/');
+	
 	function loadlib($name){
 
 		if ($GLOBALS['loaded_libs'][$name]){
@@ -84,10 +85,10 @@
         $config_files = array();
 
         $global_config = FLAMEWORK_INCLUDE_DIR . "config.php";
-        $global_secrets = FLAMEWORK_INCLUDE_DIR . "secrets.php";
+        $global_secrets = SECRETS_DIR . "secrets.php";
 
         $local_config = FLAMEWORK_INCLUDE_DIR . "config_local_{$host}.php";
-        $local_secrets = FLAMEWORK_INCLUDE_DIR . "secrets_local_{$host}.php";
+        $local_secrets = SECRETS_DIR . "secrets_local_{$host}.php";
 
         $config_files[] = $global_config;
 
