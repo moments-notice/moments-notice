@@ -54,11 +54,11 @@
 
 	#######################################################
 
-	function photos_get_photos_by_roll($roll_id){
+	function photos_get_photos_by_roll($roll_id, $more=array()){
 
 		$sql = "SELECT * FROM photos WHERE roll_id=".intval($roll_id);
 
-		return db_fetch($sql);
+		return db_fetch_paginated($sql, $more);
 
 	}
 

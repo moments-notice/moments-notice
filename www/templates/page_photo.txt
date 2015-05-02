@@ -1,10 +1,8 @@
 {include file='inc_head.txt' nav_tab='photo'}
 
 <div class="container">
-
-	<div><img class="img-responsive" src="{$cfg.abs_root_url}assets/{$photo.roll_id|escape}/{$photo.filename|escape}" /></div>
-	<h1>{$photo.id|escape}</h1>
-
+	<p>This is photo {$photo.id|escape} and it is part of roll <a href="{$cfg.abs_root_url}roll/{$photo.roll_id|escape}">{$photo.roll_id|escape}</a>.</p>
+	<img class="img-responsive" src="{$cfg.s3_bucket}{$photo.roll_id|escape}/{$photo.filename|escape}" />
 </div>
 
 {include file='inc_foot.txt'}

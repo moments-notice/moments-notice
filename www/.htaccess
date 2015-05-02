@@ -143,6 +143,10 @@ RewriteRule ^invite(?:/([^/]+))?/?$	invite.php?code=$1&%{QUERY_STRING} [L]
 RewriteRule ^rolls/?$                        rolls.php              [L]
 RewriteRule ^rolls/page(\d+)/?$		     rolls.php?page=$1	    [L]
 RewriteRule ^roll/([0-9]+)/?$		     roll.php?id=$1	    [L]
+RewriteRule ^roll/([0-9]+)/page(\d+)/?$ roll.php?id=$1&page=$2	    [L]
+
+# Photos
+RewriteRule ^photo/([0-9]+)/?$		     photo.php?id=$1	    [L]
 
 # Darkroom Log
 RewriteRule ^darkroom/?$                     lab.php              [L]

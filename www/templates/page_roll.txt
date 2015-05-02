@@ -1,20 +1,12 @@
 {include file='inc_head.txt' nav_tab='roll'}
 
 <div class="container">
-<h1>Roll {$roll.id|escape}</h1>
-<p>Created: {$roll.created|date_format:"%Y-%m-%d"|escape}</p>
-{if $roll.emulsion_id != 0}<p>Emulsion ID: {$roll.emulsion_id|escape}</p>{/if}
-{if $roll.exp_date != 0}<p>Expiration date: {$roll.exp_date|date_format:"%Y-%m"|escape}</p>{/if}
-{if $roll.film_type}<p>Type: {$roll.film_type|escape}</p>{/if}
-{if $roll.film_brand}<p>Brand: {$roll.film_brand|escape}</p>{/if}
-{if $roll.film_name}<p>Name: {$roll.film_name|escape}</p>{/if}
-{if $roll.film_speed != 0}<p>ISO: {$roll.film_speed|escape}</p>{/if}
-<p>Username: {$roll.username|escape}</p>
-<p>Full Name: {$roll.fullname|escape}</p>
-
 {foreach from=$photos item=photo}
-	<li><a href="{$cfg.abs_root_url}photo.php?id={$photo.id|escape}">{$photo.id|escape}</a></li>
+    <p>This is roll <a href="{$cfg.abs_root_url}roll/{$roll.id|escape}">{$roll.id|escape}</a> photographed by {$roll.fullname|escape} and you are looking at frame {$photo.frame|escape} whose ID is <a href="{$cfg.abs_root_url}photo/{$photo.id|escape}">{$photo.id|escape}</a>.</p>
+	<a href="{$cfg.abs_root_url}photo/{$photo.id|escape}"><img class="img-responsive" src="{$cfg.s3_bucket}{$photo.roll_id|escape}/{$photo.filename|escape}" /></a>
 {/foreach}
+
+    {pagination pagination=$pagination style='nextprev'}
 
 </div>
 
