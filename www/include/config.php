@@ -49,9 +49,9 @@
 
 	# hard coding this URL will ensure it works in cron mode too
 
-	# $GLOBALS['cfg']['server_scheme'] = (isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on')) ? 'https' : 'http';
+	$GLOBALS['cfg']['server_scheme'] = (isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on')) ? 'https' : 'http';
 	
-	$GLOBALS['cfg']['server_scheme'] = 'https';	
+	# $GLOBALS['cfg']['server_scheme'] = 'https';	
 	$GLOBALS['cfg']['server_name'] = isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : 'fake.com';
 
 	$GLOBALS['cfg']['abs_root_url']		= "{$GLOBALS['cfg']['server_scheme']}://{$GLOBALS['cfg']['server_name']}/";
@@ -86,8 +86,8 @@
 
 	# Caching stuff
 
-        $GLOBALS['cfg']['enable_feature_cache_prefixes'] = 1;
-        $GLOBALS['cfg']['cache_prefix'] = $GLOBALS['cfg']['environment'];
+	$GLOBALS['cfg']['enable_feature_cache_prefixes'] = 1;
+	$GLOBALS['cfg']['cache_prefix'] = $GLOBALS['cfg']['environment'];
 
 	# Note: memcache stuff is not enabled by default but is 
 	# available in the 'extras' directory
@@ -223,6 +223,12 @@
 	$GLOBALS['cfg']['enable_feature_invite_codes'] = 1;
 	$GLOBALS['cfg']['invite_codes_allow_signedin_users'] = 1;
 	$GLOBALS['cfg']['crypto_invite_secret'] = 'READ-FROM-SECRETS';
+	
+	#
+	# S3 bucket
+	#
+	
+	$GLOBALS['cfg']['s3_bucket'] = 'https://s3.amazonaws.com/moments-notice/';
 
 
 	# API methods and "blessings" are defined at the bottom
