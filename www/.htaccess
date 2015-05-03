@@ -175,6 +175,6 @@ RewriteRule ^admin/invites/page(\d+)/?$			admin_invite_codes.php?page=$1	    [L]
 
 # Shlong
 
-RewriteRule ^shlong-create/?$		     shlong_create.php	[L,QSA]
+RewriteRule ^admin/shlong/?$		     shlong_create.php	[L,QSA]
 
 RewriteRule ^([a-zA-Z0-9]+)/?$ 		     shlong.php?short_url=$1&%{QUERY_STRING} [L]

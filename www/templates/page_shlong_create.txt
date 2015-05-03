@@ -2,12 +2,14 @@
 
 {include file="inc_head.txt" title="Shlong" subtitle="short URL is short"}
 
+<div class="container">
+
 {if $short}
 
 {if !$short.ok}
 <p class="error">Hmmm. There was a problem creating that short URL: {$short.error|escape}</p>
 {else}
-<p style="font-size:4em;font-family:sans-serif;text-align:center;">
+<p style="font-size:2em;font-family:sans-serif;text-align:center;">
 <strong>{$cfg.abs_root_url}{$short.short_url|escape}</strong>
 <span style="font-size:small;"><br />will redirect to {$short.long_url|escape}</span>
 </p>
@@ -16,7 +18,7 @@
 <hr style="border:none; border-top: 1px solid #ccc; margin-bottom:10%;" />
 {/if}
 
-<form method="POST" action="{$cfg.abs_root_url}shlong-create/">
+<form method="POST" action="{$cfg.abs_root_url}admin/shlong/">
 	{$crumb_key|crumb_input}  
   <fieldset>
 	<div class="form-group">
@@ -28,5 +30,6 @@
   </div>
   </fieldset>
 </form>
+</div>
 
 {include file="inc_foot.txt"}
