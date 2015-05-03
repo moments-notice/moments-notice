@@ -1,0 +1,36 @@
+{include file='inc_head.txt' nav_tab='urls'}
+
+<div class="container">
+<h1>Urls</h1>
+<p>This is all the urls. | <a href="{$cfg.abs_root_url}admin/shlong">Shorten a url</a></p>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Short URL</th>
+          <th>Long URL</th>
+		  <th>Created</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+
+
+{foreach from=$urls.rows item=url}
+<tr>
+	<td>{$url.id|escape}</a></td>
+	<td>{$url.short_url|escape}</td>
+	<td>{$url.long_url|escape}</td>
+	<td>{$url.created|escape}</td>
+</tr>
+{/foreach}
+
+      </tbody>
+    </table>
+
+    {pagination pagination=$pagination style='nextprev'}
+
+</div>
+
+{include file='inc_foot.txt'}
