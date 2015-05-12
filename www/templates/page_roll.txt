@@ -1,10 +1,12 @@
 {include file='inc_head.txt' nav_tab='roll'}
 
 <div class="container">
+<p>This is roll <a href="{$cfg.abs_root_url}roll/{$roll.id|escape}">{$roll.id|escape}</a> photographed by {$roll.fullname|escape}
 {foreach from=$photos item=photo}
-    <p>This is roll <a href="{$cfg.abs_root_url}roll/{$roll.id|escape}">{$roll.id|escape}</a> photographed by {$roll.fullname|escape} and you are looking at frame {$photo.frame|escape} whose ID is <a href="{$cfg.abs_root_url}photo/{$photo.id|escape}">{$photo.id|escape}</a>.</p>
+     and you are looking at frame {$photo.frame|escape} whose ID is <a href="{$cfg.abs_root_url}photo/{$photo.id|escape}">{$photo.id|escape}</a>.</p>
 	<a href="{$cfg.abs_root_url}photo/{$photo.id|escape}"><img class="img-responsive" src="{$cfg.s3_bucket}{$photo.roll_id|escape}/{$photo.filename|escape}" /></a>
 {/foreach}
+    <br><p>This roll was created on {$roll.created|date_format:"%Y-%m-%d"|escape} {if !$photos }but it has not yet been returned to Moment's Notice. Once it has been returned, developed and scanned, its photos will appear here.{/if}</p>
 
     {pagination pagination=$pagination style='nextprev'}
 
