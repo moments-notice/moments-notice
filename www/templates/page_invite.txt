@@ -3,7 +3,6 @@
 {include file="inc_head.txt"}
 
 <div class="container">
-<img class="img-responsive" src="{$cfg.abs_root_url}images/banner.jpg" />
 <h3>Welcome to Moment's Notice!</h3>
 
 <p>Congratulations!</p>
