@@ -1,49 +1,188 @@
 {capture assign="extra_head"}
-	     <link href="{$cfg.abs_root_url}css/main.source.css" rel="stylesheet">
+	     <link href="{$cfg.abs_root_url}css/home.css" rel="stylesheet">
 {/capture}
 
 {include file='inc_head.txt' nav_tab='home'}
 
-    <div class="site-wrapper">
+	<!-- ********** HEADER SECTION ********** --> 
+	<div id="h">
+		<div class="container">
+			<div class="row centered">
+				<h1 class="logo aligncenter">Welcome to Moment's Notice</h1>
+				<h3>an experiment in correspondence</h3>
+				
+				<div class="col-md-6 col-md-offset-3 mt">
+					<!-- Begin MailChimp Signup Form -->
+ 	      			<form id="mc-embedded-subscribe-form" class="validate form-inline"" action="//micahwalter.us2.list-manage.com/subscribe/post?u=b9087a7641b069756fa341e6c&amp;id=bbd9ab1c2a" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+	      	    	<div class="form-group">
+		    	 		<input id="mce-EMAIL" class="email form-control" name="EMAIL" required="" type="email" value="" placeholder="email address" />
+				 		<input id="mc-embedded-subscribe" class="btn btn-primary" name="subscribe" type="submit" value="Sign Up!" />
+			 			<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+			 			<div style="position: absolute; left: -5000px;"><input tabindex="-1" name="b_b9087a7641b069756fa341e6c_bbd9ab1c2a" type="text" value="" /></div>
+		    		</div>
+					</form>
+				</div>
+			</div><!--/row -->
+			
+			<div class="row">
+				<div class="continue">
+					<i class="ion-chevron-down"></i>
+				</div>
+			</div><!--/row -->
+		</div><!--/container -->
+	</div><!--/header -->	
+	
+	<!-- ********** CALL TO ACTION SECTION ********** --> 
+	<div id="cta">
+		<div class="container">
+			<div class="row">
+				<h2>what is moment's notice?</h2>
+			</div><!--/row -->
+		</div><!--/container -->
+	</div><!--/CTA -->
+	
+		<!-- ********** INTRODUCTION SECTION ********** --> 
+	<div class="container mt">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 centered">
+				<h2>It's a chance to be part of something small</h2>
+				<hr class="aligncenter">
+				<h4>It’s about slowing your brain down, and it’s about breathing.</h4>
+			</div><!-- /col-md-6-->
+		</div><!--/row -->
+		
+		<div class="row mt">
+			<div class="col-md-6">
+				<br />
+				<p><i class="ion-android-information green alignleft"></i> This project is about correspondence. It’s also about the dying art of analog photography. It’s about the avalanche of imagery posted to the internet every single second of our lives. It’s about slowing your brain down, and it’s about breathing.</p>
+				<p class="mt"><i class="ion-android-information green alignleft"></i> I’m curious about selection, and curation, and building a long lasting archive of images that communicate something cerebral–something that lives outside the current framework.</p>
+				<p class="mt"><i class="ion-android-information green alignleft"></i> Think of this as an opportunity to be a part of something small. You’ll be connecting with me, the person running this project.</p>
+			</div><!--/col-md-6 -->
+			
+			<div class="col-md-6 of">
+				<img src="{$cfg.abs_root_url}images/medium.png" class="img-responsive aligncenter" alt="" data-effect="slide-right">
+			</div>
+		</div><!--/row -->
+	</div><!--/container -->
+	
+	<!-- ********** HOW IT WORKS SECTION ********** --> 
+	<div id="g">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 centered">
+					<h2>How It Works</h2>
+					<hr class="aligncenter">
+					<h4>Remember stamps?</h4>
+				</div><!-- /col-md-6-->
+			</div><!--/ row-->
+			
+			<div class="row mt">
+				<div class="col-md-4">
+					<h4 class="green">STEP 1</h4>
+					<p>To participate, all you have to do is enter your email address in the box below. You’ll get added to the mailing list and will begin to receive about one email a month featuring the newest images from the project.</p>
+					<h4 class="green mt">STEP 2</h4>
+					<p>Eventually, you will receive an invitation email. This email will contain a link that will take you to a form where you will fill out some shipping info and your details. Then after a short while you’ll receive your first roll of film.</p>
+				</div><!--/col-md-4-->
+				<div class="col-md-4">
+					<img src="{$cfg.abs_root_url}images/rolls.png" alt="" class="img-responsive aligncenter" data-effect="slide-bottom">
+				</div><!--/col-md-4-->
+				<div class="col-md-4">
+					<h4 class="green">STEP 3</h4>
+					<p>Once you’ve shot the roll, send it back to the address supplied. I’ll process the film by hand in my little home-made darkroom. I’ll use the best, most archival, artisanal chemical process I can work out.</p>
+					<h4 class="green mt">STEP 4</h4>
+					<p>I’ll then make high-res scans of all of your images. These scans and smaller-res versions will be uploaded to a new archive website. Each frame and each roll will be given a unique ID and a persistent URL.</p>
+				</div><!--/col-md-4-->
+			</div><!--/row -->
+			
+			<br><br>
+			
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 centered">
+					<!-- Begin MailChimp Signup Form -->
+ 	      			<form id="mc-embedded-subscribe-form" class="validate form-inline"" action="//micahwalter.us2.list-manage.com/subscribe/post?u=b9087a7641b069756fa341e6c&amp;id=bbd9ab1c2a" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+	      		   <div class="form-group">
+		    		 	<input id="mce-EMAIL" class="email form-control" name="EMAIL" required="" type="email" value="" placeholder="email address" />
+					 	<input id="mc-embedded-subscribe" class="btn btn-primary" name="subscribe" type="submit" value="Sign Up!" />
+			 			<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+			 			<div style="position: absolute; left: -5000px;"><input tabindex="-1" name="b_b9087a7641b069756fa341e6c_bbd9ab1c2a" type="text" value="" /></div>
+		    		</div>
+					</form>
+				</div>
+			</div>
+			
+			<br><br>
 
-      <div class="site-wrapper-inner">
+		</div><!--/container -->
+	</div><!--/G -->
+	
+	<!-- ********** CALL TO ACTION SECTION ********** --> 
+	<div id="cta">
+		<div class="container">
+			<div class="row">
+				<h2>Your negatives will be stored in my state of the art archival filing system, somewhere in Brooklyn, New York.</h2>
+			</div><!--/row -->
+		</div><!--/container -->
+	</div><!--/CTA -->
 
-        <div class="cover-container">
+	<!-- ********** FEATURES SECTION - Part 1 ********** --> 
+	<div class="container mt">
+		<div class="row">
+				<div class="col-md-6 col-md-offset-3 centered">
+					<h2>Issue # 1</h2>
+					<hr class="aligncenter">
+					<h4><a href="https://medium.com/moments-notice/moment-s-notice-issue-1-d3e65289d644">Photographs by Helen D. Wall</a></h4>
+				</div><!-- /col-md-6-->
+		</div><!--/row -->
+		
+		<div class="row mt">
+			<div class="col-md-12">
+				<a href="https://medium.com/moments-notice/moment-s-notice-issue-1-d3e65289d644"><img src="{$cfg.abs_root_url}images/wall.jpg" class="img-responsive aligncenter" alt="" data-effect="slide-bottom"></a>
+				<br><br>
+			</div><!--/col-md-12-->
+		</div><!--/row -->
+	</div><!--/container -->
 
-          <div class="masthead clearfix">
-          </div>
+	<!-- ********** REGISTER SECTION ********** --> 
+	<div id="g">
+		<div class="container">
+			<div class="row mt">
+				<div class="col-md-6 col-md-offset-3 centered">
+					<h2>Sign Up!</h2>
+				</div><!-- /col-md-6-->
+			</div><!--/row -->
+			
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 mt centered">
+					<!-- Begin MailChimp Signup Form -->
+ 	      			<form id="mc-embedded-subscribe-form" class="validate form-inline"" action="//micahwalter.us2.list-manage.com/subscribe/post?u=b9087a7641b069756fa341e6c&amp;id=bbd9ab1c2a" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+	      	    	<div class="form-group">
+		    	 		<input id="mce-EMAIL" class="email form-control" name="EMAIL" required="" type="email" value="" placeholder="email address" />
+				 		<input id="mc-embedded-subscribe" class="btn btn-primary" name="subscribe" type="submit" value="Sign Up!" />
+			 			<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+			 			<div style="position: absolute; left: -5000px;"><input tabindex="-1" name="b_b9087a7641b069756fa341e6c_bbd9ab1c2a" type="text" value="" /></div>
+		    		</div>
+					</form>
+				</div>
+			</div><!--/row -->
+		</div><!--/container -->
+	</div><!--/g -->
+	
+	<!-- ********** END SECTION ********** --> 
+	<div class="container">
+		<div class="row mtb">
+			<div class="col-md-6 col-md-offset-3 centered">
+				<p class="text28">
+					<a href="http://twitter.com/_momentsnotice"><i class="ion-social-twitter"></i></a>
+					<a href="http://instagram.com/_momentsnotice"><i class="ion-social-instagram"></i></a>
+					<a href="https://www.facebook.com/momentsnoticeproject"><i class="ion-social-facebook"></i></a>
+				</p>
+				<hr class="aligncenter">
+				<p>moments-notice.org | Since 2015</p>
+			</div>
+		</div><!--/row -->
+	</div><!--/container -->
 
-          <div class="inner cover">
-            <h1 class="cover-heading">Welcome to Moment's Notice</h1>
-	    <p>An experiment in correspondence</p>
-    
-            <!-- <p>So far we have had {$stats.orders|escape} <a href="{$cfg.abs_root_url}rolls">rolls</a> requested, have shipped {$stats.shipped|escape} of them and developed {$stats.developed|escape}.
-</p> -->
-            <p class="lead">
-	      <!-- Begin MailChimp Signup Form -->
- 	      <form id="mc-embedded-subscribe-form" class="validate form-inline"" action="//micahwalter.us2.list-manage.com/subscribe/post?u=b9087a7641b069756fa341e6c&amp;id=bbd9ab1c2a" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
-	      	    <div class="form-group">
-		    	 <input id="mce-EMAIL" class="email form-control" name="EMAIL" required="" type="email" value="" placeholder="email address" />
-			 <input id="mc-embedded-subscribe" class="btn btn-primary" name="subscribe" type="submit" value="Sign Up!" />
-			 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-			 <div style="position: absolute; left: -5000px;"><input tabindex="-1" name="b_b9087a7641b069756fa341e6c_bbd9ab1c2a" type="text" value="" /></div>
-		    </div>
-              
-           
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
 
 
-
-<!-- <div class="container">
-<img class="img-responsive" src="{$cfg.abs_root_url}images/banner.jpg" />
-<br />
-</div>
--->
 
 {include file='inc_foot.txt'}

@@ -1,0 +1,140 @@
+/* Import fonts */
+/*@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900); */
+
+html,
+body {
+	height: 100%;
+	padding-top:0px;
+}
+
+.alignleft { float: left; }
+.alignright { float: right; }
+.aligncenter {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	clear: both;
+}
+.centered {text-align: center}
+.mt {margin-top: 50px;}
+.mb {margin-bottom: 50px;}
+.mtb {margin-top: 50px; margin-bottom: 50px;}
+.mtb2 { margin-top: 100px; margin-bottom: 100px;}
+.ptb {padding-top: 80px; padding-bottom: 80px;}
+
+.clear {
+	clear: both;
+	display: block;
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+	width:100%;
+}
+::-moz-selection  {
+	color: #fff;
+	text-shadow:none;
+	background:#2B2E31;
+}
+::selection {
+	color: #fff;
+	text-shadow:none;
+	background:#2B2E31;
+}
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+/* Color Theme */
+.green {
+	color: #1abc9c;
+}
+
+/* Size Helper */
+
+.big {
+	font-size: 60px;
+}
+
+.text16 {
+	font-size: 16px;
+}
+
+.text28 {
+	font-size: 28px;
+}
+
+.text28 i {
+	padding: 8px;
+}
+
+/* HEADER SECTION */
+#h {
+	background: url(../images/banner.jpg) no-repeat center top;
+	padding-top: 60px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 700px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#h h1.logo {
+	font-size:41px;
+	text-align: center;
+	color: white;
+	margin-top:180px;
+	padding: 12px;
+}
+
+#h h3 {
+	color: white;
+}
+
+#h .continue {
+	font-size: 30px;
+	color: #1abc9c;
+	margin-top: 80px;
+}
+
+
+/* CALL TO ACTION */
+#cta {
+	background: #2f2f2f;
+	color: white;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#cta h2 {
+	text-align: center;
+}
+
+/* GREY SECTION */
+
+#g {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background: #f7f8fa;
+}
+
+/* GENERAL CONF */
+
+i {
+	margin-right: 10px;
+}

@@ -1,4 +1,4 @@
-{include file='inc_head.txt' nav_tab='rolls'}
+{include file='inc_head.txt' nav_tab='darkroom'}
 
 <div class="container">
 <h1>Darkroom Logs</h1>

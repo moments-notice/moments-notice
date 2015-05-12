@@ -1,4 +1,7 @@
+{assign var='page_title' value='rolls'}
+
 {include file='inc_head.txt' nav_tab='rolls'}
+
 
 <div class="container">
 <h1>Rolls</h1>
