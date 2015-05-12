@@ -35,6 +35,4 @@
 
   <body>
   
-  {if $nav_tab != "home"}
-    {include file="inc_head_navi.txt"}
-  {/if}  
+  {include file="inc_head_navi.txt"}
