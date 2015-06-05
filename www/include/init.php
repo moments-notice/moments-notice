@@ -37,7 +37,7 @@
 	$GLOBALS['loaded_libs'] = array();
 
 	define('FLAMEWORK_INCLUDE_DIR', dirname(__FILE__).'/');
-	define('SECRETS_DIR', realpath(dirname(__FILE__).'/../../../secrets/').'/');
+	define('SECRETS_DIR', realpath(dirname(__FILE__).'/../../secrets/').'/');
 	
 	function loadlib($name){
 

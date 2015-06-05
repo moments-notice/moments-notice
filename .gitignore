@@ -1,5 +1,5 @@
 *~
-www/include/secrets*.php
+secrets/
 www/include/config_local*.php
 .vagrant
 tests/coverage.state
