@@ -12,16 +12,9 @@
 				<h3>an experiment in correspondence</h3>
 				
 				<div class="col-md-6 col-md-offset-3 mt">
-					<!-- Begin MailChimp Signup Form -->
- 	      			<form id="mc-embedded-subscribe-form" class="validate form-inline"" action="//micahwalter.us2.list-manage.com/subscribe/post?u=b9087a7641b069756fa341e6c&amp;id=bbd9ab1c2a" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
-	      	    	<div class="form-group">
-		    	 		<input id="mce-EMAIL" class="email form-control" name="EMAIL" required="" type="email" value="" placeholder="email address" />
-				 		<input id="mc-embedded-subscribe" class="btn btn-primary" name="subscribe" type="submit" value="Sign Up!" />
-			 			<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-			 			<div style="position: absolute; left: -5000px;"><input tabindex="-1" name="b_b9087a7641b069756fa341e6c_bbd9ab1c2a" type="text" value="" /></div>
+				     <a class="btn btn-primary" href="{$cfg.abs_root_url}signup">Sign Up!</a>
 		    		</div>
-					</form>
-				</div>
+
 			</div><!--/row -->
 			
 			<div class="row">
@@ -98,16 +91,8 @@
 			
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 centered">
-					<!-- Begin MailChimp Signup Form -->
- 	      			<form id="mc-embedded-subscribe-form" class="validate form-inline"" action="//micahwalter.us2.list-manage.com/subscribe/post?u=b9087a7641b069756fa341e6c&amp;id=bbd9ab1c2a" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
-	      		   <div class="form-group">
-		    		 	<input id="mce-EMAIL" class="email form-control" name="EMAIL" required="" type="email" value="" placeholder="email address" />
-					 	<input id="mc-embedded-subscribe" class="btn btn-primary" name="subscribe" type="submit" value="Sign Up!" />
-			 			<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-			 			<div style="position: absolute; left: -5000px;"><input tabindex="-1" name="b_b9087a7641b069756fa341e6c_bbd9ab1c2a" type="text" value="" /></div>
+				     <a class="btn btn-primary" href="{$cfg.abs_root_url}signup">Sign Up!</a>
 		    		</div>
-					</form>
-				</div>
 			</div>
 			
 			<br><br>
@@ -153,16 +138,9 @@
 			
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 mt centered">
-					<!-- Begin MailChimp Signup Form -->
- 	      			<form id="mc-embedded-subscribe-form" class="validate form-inline"" action="//micahwalter.us2.list-manage.com/subscribe/post?u=b9087a7641b069756fa341e6c&amp;id=bbd9ab1c2a" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
-	      	    	<div class="form-group">
-		    	 		<input id="mce-EMAIL" class="email form-control" name="EMAIL" required="" type="email" value="" placeholder="email address" />
-				 		<input id="mc-embedded-subscribe" class="btn btn-primary" name="subscribe" type="submit" value="Sign Up!" />
-			 			<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-			 			<div style="position: absolute; left: -5000px;"><input tabindex="-1" name="b_b9087a7641b069756fa341e6c_bbd9ab1c2a" type="text" value="" /></div>
+				 	<a class="btn btn-primary" href="{$cfg.abs_root_url}signup">Sign Up!</a>
 		    		</div>
-					</form>
-				</div>
+
 			</div><!--/row -->
 		</div><!--/container -->
 	</div><!--/g -->
