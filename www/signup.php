@@ -81,7 +81,7 @@
 			if ($ret['ok']){
 
 				### send welcome email.
-				users_send_welcome_email($res['user']);
+				users_send_welcome_email($ret['user']);
 
 				$redir = strlen($redir) ? $redir : '/';
 

@@ -1,8 +1,6 @@
 <?php
 	include("include/init.php");
 
-	login_ensure_loggedout();
-
 	loadlib("invite_codes");
 
 	if (! $GLOBALS['cfg']['enable_feature_invite_codes']){

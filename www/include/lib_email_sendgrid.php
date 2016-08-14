@@ -18,7 +18,7 @@
 		$from = new SendGrid\Email($args['from_name'], $args['from_email']);
 
 		$subject = $args['subject'];
-		$content = new SendGrid\Content("text/plain", $args['message']);
+		$content = new SendGrid\Content("text/html", $args['message']);
 
 		$mail = new SendGrid\Mail($from, $subject, $to, $content);
 
