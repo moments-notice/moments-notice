@@ -16,7 +16,6 @@
 	      <ul class="nav navbar-nav">
 	      	  <li><a target="_blank" href="https://medium.com/moments-notice/welcome-to-moments-notice-7d28f90de1d5">about</a></li>
 	      	  <li><a target="_blank" href="https://medium.com/moments-notice">publication</a></li>
-		  <li><a target="_blank" href="https://medium.com/moments-notice-lab">lab</a></li>
 	      	  <li><a target="_blanl" href="https://help.moments-notice.org">help</a></li>
 		  <li {if $nav_tab == 'rolls' }class="active"{/if}><a href="{$cfg.abs_root_url}rolls">rolls</a></li>
 		  <li><a href="{$cfg.abs_root_url}darkroom">darkroom</a></li>
