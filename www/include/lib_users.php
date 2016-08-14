@@ -208,6 +208,7 @@
 		if (!$code) return 0;
 
 		$GLOBALS['smarty']->assign('code', $code);
+		$GLOBALS['smarty']->assign('user', $user);
 
 		email_send(array(
 			'to_email'	=> $user['email'],
