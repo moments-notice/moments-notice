@@ -8,36 +8,46 @@
 	{if $error_failed}		<p class="alert alert-error">Failed for an unknown reason :(</p>{/if}
 
 	<form action="/signup" method="post" accept-encoding="UTF-8" class="form-horizontal">
-		<input type="hidden" name="signup" value="1" />
-		<input type="hidden" name="redir" value="{$redir|escape}" />
+	<input type="hidden" name="signup" value="1" />
+	<input type="hidden" name="redir" value="{$redir|escape}" />
 
-		<fieldset>
-	        <div class="control-group{if $error_missing && !$username} error{/if}">
-				<label class="control-label" for="username">username</label>
-				<div class="controls">
-					<input type="text" name="username" size="40" value="{$username|escape}" />
-				</div>
-			</div>
-			
-	        <div class="control-group{if $error_missing && !$email} error{/if}">
-				<label class="control-label" for="email">email address</label>
-				<div class="controls">
-					<input type="email" name="email" size="40" value="{$email|escape}" />
-				</div>
-			</div>
+	<fieldset>
 
-	        <div class="control-group{if $error_missing && !$password} error{/if}">
-				<label class="control-label" for="password">password</label>
-				<div class="controls">
-					<input type="password" name="password" size="40" value="{$password|escape}" />
-				</div>
-			</div>
+	<!-- Text input-->
+	<div class="form-group">
+  	     <label class="col-md-4 control-label" for="email">Email:</label>  
+  	     <div class="col-md-4">
+  	     	  <input id="email" name="email" type="text" placeholder="email" class="form-control input-md" value="{$email|escape}" required="">
+	     </div>
+	</div>
 
-	        <div class="form-actions">
-				<input type="submit" class="btn btn-primary" value="CREATE YOUR ACCOUNT"/>
-			</div>
-		</fieldset>
+	<!-- Text input-->
+	<div class="form-group">
+  	     <label class="col-md-4 control-label" for="username">Username:</label>  
+  	     <div class="col-md-4">
+  	     	  <input id="username" name="username" type="text" placeholder="username" class="form-control input-md" value="{$username|escape}" required="">    
+	     </div>
+	</div>
+
+	<!-- Password input-->
+	<div class="form-group">
+  	     <label class="col-md-4 control-label" for="password">Password</label>
+  	     <div class="col-md-4">
+    	     	  <input id="password" name="password" type="password" placeholder="password" class="form-control input-md" value="{$password|escape}" required="">    
+	     </div>
+	</div>
+
+	<!-- Button -->
+	<div class="form-group">
+  	     <label class="col-md-4 control-label" for="signup"></label>
+  	     <div class="col-md-4">
+       	     	  <input type="submit" class="btn btn-primary" value="Sign Up!"/>
+  	     </div>
+	</div>
+
+	</fieldset>
 	</form>
+
 </div>
 
 {include file='inc_foot.txt'}

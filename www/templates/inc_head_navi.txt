@@ -35,6 +35,9 @@
 		   {else}
 		   
 		   <li id="signin"><a href="{$cfg.abs_root_url}signin/">sign in</a></li>
+		   {if "signup"|@features_is_enabled}
+		       	<li id="signup"><a href="{$cfg.abs_root_url}signup/">sign up</a></li>
+		   {/if}
 	       </ul>
 	  </li>
 	  {/if}
