@@ -1,0 +1,6 @@
+{assign var="email_subject" value="Welcome to Moment's Notice!"}
+
+Hi {$user.username},
+Thank you for signing up for Moment's Notice! You've been added to our list and soon you will receive an invitation to get started. In the meantime, sit tight, enjoy the photography on the site and get your camera ready.
+
+-micah

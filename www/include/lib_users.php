@@ -220,6 +220,20 @@
 
 	#################################################################
 
+	function users_send_welcome_email(&$user){
+
+		$GLOBALS['smarty']->assign('user', $user);
+
+		email_send(array(
+			'to_email'	=> $user['email'],
+			'template'	=> 'email_welcome_email.txt',
+		));
+
+		return 1;
+	}
+
+	#################################################################
+
 	function users_generate_password_reset_code(&$user){
 
 		loadlib('random');

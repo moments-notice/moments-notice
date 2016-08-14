@@ -80,6 +80,9 @@
 
 			if ($ret['ok']){
 
+				### send welcome email.
+				users_send_welcome_email($res['user']);
+
 				$redir = strlen($redir) ? $redir : '/';
 
 				login_do_login($ret['user'], $redir);
