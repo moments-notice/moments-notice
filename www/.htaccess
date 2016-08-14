@@ -114,7 +114,7 @@ RewriteRule  ^rest/?$			api_rest.php?%{QUERY_STRING}  [L]
 
 # Login stuff
 
-# RewriteRule  ^signup/?$			signup.php		[L]
+RewriteRule  ^signup/?$			signup.php		[L]
 RewriteRule  ^signin/?$			signin.php		[L]
 RewriteRule  ^signout/?$		signout.php		[L]
 RewriteRule  ^checkcookie/?$		checkcookie.php	[L]
