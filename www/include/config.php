@@ -117,13 +117,11 @@
 	# Built email support
 	
 	$GLOBALS['cfg']['enable_feature_email_php'] = 0;
-	
-	# Mandrill email Support
-	
-	$GLOBALS['cfg']['enable_feature_email_mandrill'] = 1;
-	$GLOBALS['cfg']['mandrill_api_key'] = 'READ-FROM-SECRETS';
-	$GLOBALS['cfg']['enable_feature_mandrill_proxy'] = 0;
-	$GLOBALS['cfg']['mandrill_proxy_address'] = '';
+
+	# Sendgrid email support
+
+	$GLOBALS['cfg']['enable_feature_email_sendgrid'] = 1;
+	$GLOBALS['cfg']['sendgrid_api_key'] = 'READ-FROM-SECRETS';
 
 	#
 	# Things you can probably not worry about
@@ -349,6 +347,6 @@
 	# Always load (if feature flag is enabled)
 
 	$GLOBALS['cfg']['autoload_libs_if_enabled'] = array(
-		'email_mandrill' => array('email', 'email_mandrill'), 
+		'email_sendgrid' => array('email', 'email_sendgrid'), 
 		'email_php' => array('email', 'email_php'),
 	);

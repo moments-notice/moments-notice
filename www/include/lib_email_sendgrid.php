@@ -5,30 +5,29 @@
 	#########################################################################################
 
 	# https://github.com/sendgrid/sendgrid-php
-	include_once('sendgrid-php/SendGrid_loader.php');
+	include_once('sendgrid-php/sendgrid-php.php');
 
 	#########################################################################################
 
 	function email_sendgrid_send($args){
 		
 		$args = email_common_prepare_email($args);
-
-		$sendgrid = new SendGrid($GLOBALS['cfg']['email_sendgrid_username'], $GLOBALS['cfg']['email_sendgrid_password']);
 		
-		$mail = new SendGrid\Mail();
-		
-		$mail->addTo($args['to_email']);
-		$mail->setFrom($args['from_email']);
-		$mail->setSubject($args['subject']);
-		$mail->setText($args['message']);
+		$to = new SendGrid\Email(null, $args['to_email']);
 
-		if ($name = $more['from_name']){
-			$mail->setFromName($name);
-		}
+		$from = new SendGrid\Email($args['from_name'], $args['from_email']);
+
+		$subject = $args['subject'];
+		$content = new SendGrid\Content("text/plain", $args['message']);
+
+		$mail = new SendGrid\Mail($from, $subject, $to, $content);
+
+		$apikey = $GLOBALS['cfg']['sendgrid_api_key'];
+		$sg = new \SendGrid($apikey);
 
 		try {
-			$ok = ($sendgrid->smtp->send($mail)) ? 1 : 0;
-			$rsp = array('ok' => $ok);
+		     $ok = ($sg->client->mail()->send()->post($mail)) ? 1 : 0;
+		     $rsp = array('ok' => $ok);
 		}
 
 		catch (Exception $e){
