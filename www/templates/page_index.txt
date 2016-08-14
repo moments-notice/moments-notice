@@ -72,7 +72,7 @@
 			<div class="row mt">
 				<div class="col-md-4">
 					<h4 class="green">STEP 1</h4>
-					<p>To participate, all you have to do is enter your email address in the box below. You’ll get added to the mailing list and will begin to receive about one email a month featuring the newest images from the project.</p>
+					<p>To participate, all you have to do is sign up by clicking the button below. You’ll get added to the mailing list and will begin to receive about one email a month featuring the newest images from the project.</p>
 					<h4 class="green mt">STEP 2</h4>
 					<p>Eventually, you will receive an invitation email. This email will contain a link that will take you to a form where you will fill out some shipping info and your details. Then after a short while you’ll receive your first roll of film.</p>
 				</div><!--/col-md-4-->
