@@ -18,7 +18,7 @@
       <tr>
 	<td>{$email|escape}</a></td>
 	<td>
-	<form action="{$cfg.abs_root_url}admin_emails.php/" method="post" accept-encoding="UTF-8" class="form-horizontal">
+	<form action="{$cfg.abs_root_url}admin/emails/" method="post" accept-encoding="UTF-8" class="form-horizontal">
 		<input type="hidden" name="send" value="1" />
 		<input type="hidden" name="email" value="{$email|@escape}" />
 	        <button type="submit" class="btn btn-primary">Send test</button>
