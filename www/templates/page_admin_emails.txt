@@ -1,0 +1,35 @@
+{include file='inc_head.txt' nav_tab='admin'}
+
+<div class="container">
+<h1>Emails</h1>
+
+{if $email_sent}<div class="alert alert-success" role="alert">Email sent</div>{/if}
+
+<table class="table table-striped">
+       <thead>
+	<tr>
+          <th>Filename</th>
+          <th>Send Test</th>
+        </tr>
+      </thead>
+
+      <tbody>
+      {foreach from=$emails item=email}
+      <tr>
+	<td>{$email|escape}</a></td>
+	<td>
+	<form action="{$cfg.abs_root_url}admin_emails.php/" method="post" accept-encoding="UTF-8" class="form-horizontal">
+		<input type="hidden" name="send" value="1" />
+		<input type="hidden" name="email" value="{$email|@escape}" />
+	        <button type="submit" class="btn btn-primary">Send test</button>
+	</form>
+
+
+	</td>
+      </tr>
+      {/foreach}
+
+      </tbody>
+</table>
+
+{include file='inc_foot.txt'}

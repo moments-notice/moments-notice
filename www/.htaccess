@@ -166,6 +166,7 @@ RewriteRule ^admin/darkroom/development?$      		admin_development_log.php      
 RewriteRule ^admin/darkroom/development/page(\d+)/?$	admin_development_log.php?page=$1	    [L]
 RewriteRule ^admin/darkroom/development/create?$      	admin_development_log_create.php              [L]
 RewriteRule ^admin/darkroom/development/edit/([0-9]+)/?$      	admin_development_log_edit.php?id=$1              [L]
+RewriteRule ^admin/emails/?$      			admin_emails.php              [L]
 RewriteRule ^admin/orders/?$      			admin_orders.php              [L]
 RewriteRule ^admin/orders/page(\d+)/?$			admin_orders.php?page=$1	    [L]
 RewriteRule ^admin/users/?$      			admin_users.php              [L]

@@ -17,6 +17,7 @@
 	<li><a href="{$cfg.abs_root_url}admin/invites">Invites</a></li>
 	<li><a href="{$cfg.abs_root_url}admin/shlong">Make a shlong</a></li>
 	<li><a href="{$cfg.abs_root_url}admin/shlong/urls">All the shlong</a></li>
+	<li><a href="{$cfg.abs_root_url}admin/emails">Test Emails</a></li>
 
 	</ul>
 
